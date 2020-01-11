@@ -10,3 +10,6 @@ Just my Python Programs
 
 <b>[`subtract_2.py`](subtract_2.py)</b>
 * Program to Subtract two Entered Number(s).
+
+<b>[`multiplication_2.py`](multiplication_2.py)</b>
+* Program to Multiply two Entered Number(s).
