@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 print('///Program to Subtract two Number(s)///')
-print('Enter First Number: ')
+print('\nEnter First Number: ')
 a=input()
-print('Enter Second Number: ')
+print('\nEnter Second Number: ')
 b=input()
 difference=int(a)-int(b)
-print('Difference of Entered Number(s) is = ',difference)
-print('Created by Jugal Kishore -- 2020')
+print('\nDifference of Entered Number(s) {0} and {1} is = {2}'.format(a,b,difference))
+print('\nCreated by Jugal Kishore -- 2020')

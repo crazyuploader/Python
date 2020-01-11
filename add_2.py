@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 print('///Program to Add two Number(s)///')
-print('Enter First Number: ')
+print('\nEnter First Number: ')
 a=input()
-print('Enter Second Number: ')
+print('\nEnter Second Number: ')
 b=input()
 sum=int(a)+int(b)
-print('Addition of Entered Number(s) is = ',sum)
-print('Created by Jugal Kishore -- 2020')
+print('\nAddition of Entered Number(s) {0} and {1} is = {2}'.format(a,b,sum))
+print('\nCreated by Jugal Kishore -- 2020')

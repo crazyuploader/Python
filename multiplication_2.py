@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 print('///Program to Multiply Two Number(s)///')
-print('Enter First Number: ')
+print('\nEnter First Number: ')
 a=input()
-print('Enter Second Number: ')
+print('\nEnter Second Number: ')
 b=input()
 multiplication=int(a)*int(b)
-print('Final Product of Entered Number(s) is = ',multiplication)
+print('\nFinal Product of Entered Number(s) {0} and {1} is = {2}'.format(a,b,multiplication))
+print('\nCreated by Jugal Kishore -- 2020')

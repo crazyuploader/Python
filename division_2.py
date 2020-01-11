@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 print('///Program to Divide two Number(s)///')
-print('Enter Divisor: ')
+print('\nEnter Divisor: ')
 a=input()
-print('Enter Dividend: ')
+print('\nEnter Dividend: ')
 b=input()
 quotient=int(a)/int(b)
 remainder=int(a)%int(b)
-print('Quotient = {0} \nRemainder = {1}'.format(quotient,remainder))
-print('Created by Jugal Kishore -- 2020')
+print('\nQuotient = {0} \n\nRemainder = {1}'.format(quotient,remainder))
+print('\nCreated by Jugal Kishore -- 2020')
