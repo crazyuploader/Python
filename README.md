@@ -7,3 +7,6 @@ Just my Python Programs
 
 <b>[`add_2.py`](add_2.py)</b>
 * Program to Add two Entered Number(s).
+
+<b>[`subtract_2.py`](subtract_2.py)</b>
+* Program to Subtract two Entered Number(s).
