@@ -7,4 +7,4 @@ python:
 install:
  - pip install pyflakes
  script:
- - bash build_all.sh
+ - bash check.sh
