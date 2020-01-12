@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Getting Python & PIP Ready
-          command: 'apt-get update && apt-get install -y && pip install flake8 pyflakes'
+          command: 'pip install --upgrade pip && pip install flake8 pyflakes'
       - run:
           name: Checking Python Programs using Flake8
           command: 'flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics'
