@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: "ubuntu:latest"
+    steps:
+      - checkout
+      - run:
+          name: Getting Python & PIP Ready
+          command: |
+          apt-get update && apt-get install -y python3 python-pip
+          pip install --upgrade pip
+          pip install flake8 pyflakes
+      - run:
+          name: Checking Python Programs using Flake8
+          command: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - run: 
+          name: Checking Python Programs using Pyflakes
+          command: bash check.sh
