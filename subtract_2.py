@@ -2,9 +2,9 @@
 
 print('///Program to Subtract two Number(s)///')
 print('\nEnter First Number: ')
-a=input()
+a = input()
 print('\nEnter Second Number: ')
-b=input()
-difference=int(a)-int(b)
-print('\nDifference of Entered Number(s) {0} and {1} is = {2}'.format(a,b,difference))
+b = input()
+difference = int(a) - int(b)
+print('\nDifference of Entered Number(s) {0} and {1} is = {2}'.format(a, b, difference))
 print('\nCreated by Jugal Kishore -- 2020')
