@@ -1,5 +1,7 @@
 # Python
 
+[![Build Status](https://github.com/crazyuploader/Python/workflows/Python/badge.svg?branch=master)](https://github.com/crazyuploader/Python/actions) 
+
 Just my Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
 
 <b>[`hello.py`](hello.py)</b>
