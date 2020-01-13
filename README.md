@@ -20,3 +20,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`division_2.py`](division_2.py)</b>
 * Program to Divide two Entered Number(s).
+
+<b>[`even_odd.py`](even_odd.py)</b>
+* Program to check if Entered Number is Even or Odd.
