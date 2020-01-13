@@ -1,10 +1,13 @@
 dist: bionic
 language: python
 python:
-  - "2.7"
-  - "3.7"
-  - "3.8"
+    - "2.7"
+    - "3.7"
+    - "3.8"
 install:
-  - pip install pyflakes
- script:
-  - bash check.sh
+    - pip install flake8 pyflakes
+script:
+    - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - bash check.sh
+    - echo ""
+    - echo "Done!"
