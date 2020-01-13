@@ -23,3 +23,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`even_odd.py`](even_odd.py)</b>
 * Program to check if Entered Number is Even or Odd.
+
+<b>[`factorial.py`](factorial.py)</b>
+* Program to Calculate Factorial of an Entered Number.

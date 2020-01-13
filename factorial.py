@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+print('///Program to Display Factorial of an Entered Number///')
+print('\nEnter a Number: ')
+a = input()
+factorial = 1
+for i in range(1, int(a)+1):
+    factorial = factorial * i
+print('\nFactorial of {0} is = {1}'.format(a, factorial))
+print('\nCreated by Jugal Kishore -- 2020')
