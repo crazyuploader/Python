@@ -1,10 +1,10 @@
 dist: bionic
 language: python
 python:
-  - "2.7"
-  - "3.7"
-  - "3.8"
+    - "2.7"
+    - "3.7"
+    - "3.8"
 install:
-  - pip install pyflakes
- script:
-  - bash check.sh
+    - pip install pyflakes
+script:
+    - bash check.sh
