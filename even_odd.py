@@ -3,8 +3,8 @@
 print('///Program to check if Entered Number is Even or Odd///')
 print('\nEnter a Number: ')
 a = input()
-if int (a) % 2 == 0:
-    print('Number is Even')
+if int(a) % 2 == 0:
+    print('Entered Number {0} is Even'.format(a))
 else:
-    print('Number is Odd')
+    print('Entered Number {0} is Odd'.format(a))
 print('\nCreated by Jugal Kishore -- 2020')
