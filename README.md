@@ -26,3 +26,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`factorial.py`](factorial.py)</b>
 * Program to Calculate Factorial of an Entered Number.
+
+<b>[`greater_2.py'](greater_2.py)</b>
+* Program to Display Greater Number among two Entered Number(s).
