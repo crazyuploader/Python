@@ -2,9 +2,9 @@
 
 print('///Program to Display Greater Number///')
 print('\nEnter First Number: ')
-a = input()
+a = int(input())
 print('\nEnter Second Number: ')
-b = input()
+b = int(input())
 if a > b:
     print('\nGreater Number between {0} and {1} is = {2}.'.format(a, b, a))
 elif b > a:
