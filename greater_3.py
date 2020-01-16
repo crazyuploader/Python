@@ -9,11 +9,12 @@ print('\nEnter Third Number: ')
 c = int(input())
 if a > b:
     if a > c:
-        print('\nGreatest Number = ',a)
+        print('\nGreatest Number among {0}, {1}, {2} is = {3}'.format(a, b, c, a))
     else:
-        print('\nGreatest Number = ',c)
+        print('\nGreatest Number among {0}, {1}, {2} is = {3}'.format(a, b, c, c))
 else:
     if b > c:
-        print('\nGreatest Number = ',b)
+        print('\nGreatest Number among {0}, {1}, {2} is = {3}'.format(a, b, c, b))
     else:
-        print('\nGreatest Number = ',c)
+        print('\nGreatest Number among {0}, {1}, {2} is = {3}'.format(a, b, c, c))
+print('\nCreated by Jugal Kishore -- 2020')
