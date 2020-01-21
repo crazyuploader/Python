@@ -38,3 +38,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`reverse.py`](reverse.py)</b>
 * Program to Reverse an Entered Number.
+
+<b>[`palindrome.py`](palindrome.py)</b>
+* Program to Check if Entered Number is Palindrome or not.
