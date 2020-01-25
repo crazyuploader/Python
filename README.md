@@ -41,3 +41,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`palindrome.py`](palindrome.py)</b>
 * Program to Check if Entered Number is Palindrome or not.
+
+<b>[`average.py`](average.py)</b>
+* Program to Get Average of Entered Number(s).
