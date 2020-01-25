@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 print('///Program to Display Average of Entered n Number(s)///')
-number ,total = [], 0
+number, total = [], 0
 print('\nEnter Number of Numbers you want to get Average of: ')
 num = int(input())
 for x in range(num):
