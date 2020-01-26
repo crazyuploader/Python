@@ -44,3 +44,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`average.py`](average.py)</b>
 * Program to Get Average of Entered Number(s).
+
+<b>[`table.py`](average.py)</b>
+* Program to Show Table of Entered Number.
