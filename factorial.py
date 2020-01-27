@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+__author__  = 'Jugal Kishore'
+__version__ = '1.0'
+
 print("///Program to Display Factorial of an Entered Number///")
 print("\nEnter a Number: ")
 a = input()

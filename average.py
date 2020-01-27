@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+__author__  = 'Jugal Kishore'
+__version__ = '1.0'
+
 print("///Program to Display Average of Entered n Number(s)///")
 number, total = [], 0
 print("\nEnter Number of Numbers you want to get Average of: ")
