@@ -1,6 +1,6 @@
 # Python
 
-[![Build Status](https://github.com/crazyuploader/Python/workflows/Python/badge.svg?branch=master)](https://github.com/crazyuploader/Python/actions) 
+[![Build Status](https://github.com/crazyuploader/Python/workflows/Python/badge.svg?branch=master)](https://github.com/crazyuploader/Python/actions)
 [![Build Status](https://travis-ci.com/crazyuploader/Python.svg?branch=master)](https://travis-ci.com/crazyuploader/Python)
 [![CircleCI](https://circleci.com/gh/crazyuploader/Python/tree/master.svg?style=svg)](https://circleci.com/gh/crazyuploader/Python/tree/master)
 
@@ -47,3 +47,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`table.py`](average.py)</b>
 * Program to Show Table of Entered Number.
+
+<b>[`prime.py`](prime.py)</b>
+* Program to Check if Entered Number is Prime or not.
