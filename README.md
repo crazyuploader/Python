@@ -50,3 +50,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`prime.py`](prime.py)</b>
 * Program to Check if Entered Number is Prime or not.
+
+<b>[`armstrong.py`](armstrong.py)</b>
+* Program to Check Whether or not Entered Number is Armstrong.
