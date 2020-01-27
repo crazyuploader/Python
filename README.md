@@ -53,3 +53,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`armstrong.py`](armstrong.py)</b>
 * Program to Check Whether or not Entered Number is Armstrong.
+
+<b>[`sum_digits.py`](sum_digits.py)</b>
+* Program to Display Sum of its Digit(s).
