@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [2.7, 3.8]
+        python-version: [2.7, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v1
@@ -22,13 +22,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
         pip install pyflakes
-    - name: Checking check script using Shellcheck
-      run: |
-        shellcheck ./*.sh
-    - name: Lint with flake8
-      run: |
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Checking with Pyflakes
       run: |
         bash check.sh
