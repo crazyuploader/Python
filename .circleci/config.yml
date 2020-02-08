@@ -8,9 +8,6 @@ jobs:
       - run:
           name: Getting Python & PIP Ready
           command: 'pip install --upgrade pip && pip install flake8 pyflakes'
-      - run:
-          name: Checking Python Programs using Flake8
-          command: 'flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics'
       - run: 
-          name: Checking Python Programs using Pyflakes
+          name: Checking Python Programs using Pyflakes & Flake8
           command: bash check.sh
