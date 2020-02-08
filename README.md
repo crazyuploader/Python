@@ -62,3 +62,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`number_conversion.py`](number_conversion.py)</b>
 * Program to Convert Decimal to Binary Number.
+
+<b>[`factors_of_number.py`](factors_of_number.py)</b>
+* Program to Show all the Factor(s) of an Entered Number.
