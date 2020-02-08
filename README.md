@@ -59,3 +59,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`number_swap.py`](number_swap.py)</b>
 * Program to Swap Two Entered Variables.
+
+<b>[`number_conversion.py`](number_conversion.py)</b>
+* Program to Convert Decimal to Binary Number.
