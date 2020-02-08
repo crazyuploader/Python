@@ -7,4 +7,8 @@ python:
 install:
     - pip install flake8 pyflakes
 script:
+    - echo "Checking Scripts using shellcheck"
+    - for f in *.sh; do echo ""; echo "Checking $f"; shellcheck "$f"; done
+    - echo ""
+    - echo "Running 'check.sh' script"
     - bash check.sh
