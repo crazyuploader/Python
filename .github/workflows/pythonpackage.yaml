@@ -22,6 +22,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
         pip install pyflakes
-    - name: Checking with Pyflakes
+    - name: Checking with Pyflakes & Flake8
       run: |
         bash check.sh
