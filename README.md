@@ -65,3 +65,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`factors_of_number.py`](factors_of_number.py)</b>
 * Program to Show all the Factor(s) of an Entered Number.
+
+<b>[`some_info.py`](some_info.py)</b>
+* Program to enter and display some info.
