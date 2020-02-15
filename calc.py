@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 __author__ = 'Jugal Kishore'
-__version__ = '1.0'
+__version__ = '1.1'
 
 print("///A Simple Calculator///")
 while 1:
@@ -12,6 +12,7 @@ while 1:
     print("- for Substraction")
     print("* for Multiplication")
     print("/ for Division")
+    print("% for Modulus")
     print("Anything else to exit!")
     choice = input("\nChoice: ")
     if choice == "+":
@@ -25,6 +26,11 @@ while 1:
             print("\nYou can't divide '{0}' by zero.".format(num_a))
         else:
             print("\nDivison of {0} and {1} is = {2}".format(num_a, num_b, float(num_a) / float(num_b)))
+    elif choice == "%":
+        if num_b == "0":
+            print("\nYou can't divide '{0}' by zero.".format(num_a))
+        else:
+            print("\nModulus of {0} and {1} is = {2}".format(num_a, num_b, round(float(num_a) % float(num_b), 3)))
     else:
         print("Uh-Oh, you decided to exit.")
         print("Exiting!")

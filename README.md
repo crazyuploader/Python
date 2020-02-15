@@ -71,3 +71,4 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`calc.py`](calc.py)</b>
 * A Simple Calculator Program.
+* Performs Addition, Substraction, Multiplication, Division & Modulus.
