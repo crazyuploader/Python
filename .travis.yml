@@ -5,6 +5,7 @@ python:
     - "3.7"
     - "3.8"
 install:
+    - pip install --upgrade pip
     - pip install flake8 pyflakes
 script:
     - echo "Running 'check.sh' script" && bash check.sh
