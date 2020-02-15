@@ -38,7 +38,7 @@ if [[ $temp = "y" ]]; then
     cat "${fname}.py"
     sleep 5
     echo ""
-    echo "Press 'y' to Exit"
+    echo -e "Press 'y' to ${RED}Exit${NC}"
     read -r temp
     if [[ $temp = "y" ]]; then
         clear
