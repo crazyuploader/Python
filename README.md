@@ -68,3 +68,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`some_info.py`](some_info.py)</b>
 * Program to enter and display some info.
+
+<b>[`calc.py`](calc.py)</b>
+* A Simple Calculator Program.
