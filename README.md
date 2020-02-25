@@ -71,4 +71,7 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 
 <b>[`calc.py`](calc.py)</b>
 * A Simple Calculator Program.
-* Performs Addition, Substraction, Multiplication, Division & Modulus.
+* Performs Addition, Subtraction, Multiplication, Division & Modulus.
+
+<b>[`gapful.py`](gapful.py)</b>
+* A Program to check whether an Entered Number is Gapful or not.
