@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-__author__ = 'Jugal Kishore'
-__version__ = '1.0'
+__author__ = "Jugal Kishore"
+__version__ = "1.0"
 
 print("///Program to Swapping of two Entered Numbers///")
 a = int(input("\nEnter First Number: "))

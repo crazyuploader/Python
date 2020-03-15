@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Colors
-GREEN='\033[1;32m'
-NC='\033[0m'
-YELLOW='\033[1;33m'
-MAGENTA='\033[1;35m'
-RED='\033[0;31m'
+GREEN="\033[1;32m"
+NC="\033[0m"
+YELLOW="\033[1;33m"
+MAGENTA="\033[1;35m"
+RED="\033[0;31m"
 
 # Main Script
 clear

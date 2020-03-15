@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-__author__ = 'Jugal Kishore'
-__version__ = '1.0'
+__author__ = "Jugal Kishore"
+__version__ = "1.0"
 
 print("///Gapful Number Program///")
 num = int(input("\nEnter a 3 Digit Number: "))

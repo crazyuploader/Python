@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-__author__ = 'Jugal Kishore'
-__version__ = '1.0'
+__author__ = "Jugal Kishore"
+__version__ = "1.0"
 
 print("///Program to Display Sum of its Digit(s)///")
 number = int(input("\nEnter a Number: "))

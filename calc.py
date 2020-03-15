@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-__author__ = 'Jugal Kishore'
-__version__ = '1.1'
+__author__ = "Jugal Kishore"
+__version__ = "1.1"
 
 print("///A Simple Calculator///")
 while 1:

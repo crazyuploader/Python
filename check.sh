@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # Colors
-GREEN='\033[1;32m'
-NC='\033[0m'
-YELLOW='\033[1;33m'
+GREEN="\033[1;32m"
+NC="\033[0m"
+YELLOW="\033[1;33m"
 
 echo ""
 echo -e "${GREEN}Checking all the files with Pyflakes ${NC}"
