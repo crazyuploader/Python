@@ -79,3 +79,9 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 **[`ccalc.py`](ccalc.py)**
 * A little advanced Calculator Program.
 * Performs Mathematical Operations on Entered Equation.
+* Module(s) used: `re`
+
+**[`guess_it.py`](guess_it.py)**
+* A program which generates a Random Number between 0 and 20.
+* A user has to guess within 3 attempts.
+* Module(s) used: `random`
