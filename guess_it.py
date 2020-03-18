@@ -27,7 +27,12 @@ while attempt > 0:
     print("Available Attempts: {0}".format(attempt))
     newline()
     print("Enter an integer:")
-    number = int(input())
+    try:
+        number = int(input())
+    except:
+        print("Not an integer")
+        attempt -= 1
+        continue
     if number == random_number:
         newline()
         print("You guessed it right!")
@@ -41,8 +46,9 @@ while attempt > 0:
             attempt = 3
             continue
         else:
+            newline()
             print("Exiting!")
-            exit()
+            break
     elif number > random_number:
         if number > 20 or number < 0:
             newline()
