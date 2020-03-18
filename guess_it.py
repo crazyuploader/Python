@@ -39,6 +39,7 @@ while attempt > 0:
         temp = input()
         if temp == "y":
             attempt = 3
+            continue
         else:
             print("Exiting!")
             exit()
