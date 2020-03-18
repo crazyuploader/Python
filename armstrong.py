@@ -11,7 +11,7 @@ while number > 0:
     a = number % 10
     total = total + int(a * a * a)
     number = int(number / 10)
-if (temp == total):
+if temp == total:
     print("\nEntered Number ", temp, " is an Armstrong Number.")
 else:
     print("\nEntered Number ", temp, " is not an Armstrong Number.")
