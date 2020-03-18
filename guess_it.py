@@ -5,8 +5,10 @@ __version__ = "1.0"
 
 from random import randint
 
+
 def newline():
     print("")
+
 
 print("///Random Number Guessing Game///")
 newline()
