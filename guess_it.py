@@ -30,6 +30,7 @@ while attempt > 0:
     try:
         number = int(input())
     except:
+        newline()
         print("Not an integer")
         attempt -= 1
         continue
