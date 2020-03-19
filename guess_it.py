@@ -29,7 +29,7 @@ while attempt > 0:
     print("Enter an integer:")
     try:
         number = int(input())
-    except:
+    except ValueError:
         newline()
         print("Not an integer")
         attempt -= 1
