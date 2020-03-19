@@ -85,3 +85,8 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 * A program which generates a Random Number between 0 and 20.
 * A user has to guess within 3 attempts.
 * Module(s) used: `random`
+
+**[`password_generator.py`](password_generator.py)**
+* A user driven program to generate Random Password.
+* Generates using letters, number(s), and special character(s).
+* Module(s) used: `string`, `random`
