@@ -20,11 +20,13 @@ newline()
 print("Enter Length of Password:")
 required_password = int(input())
 newline()
-generated_password = ""
-while required_password > 0:
-    random_number = random.randint(0, length)
-    generated_password = generated_password + letters[random_number]
-    required_password -= 1
-print("Generated Password:", generated_password)
+for i in range(0,3):
+    generated_password = ""
+    required = required_password
+    while required > 0:
+        random_number = random.randint(0, length)
+        generated_password = generated_password + letters[random_number]
+        required -= 1
+    print("Generated Password:", generated_password)
 newline()
 print("Created by Jugal Kishore -- 2020")
