@@ -5,10 +5,11 @@ __version__ = "1.0"
 
 
 import random
+import os
 
 
-print("///Rock Paper Scissor Game///")
 while True:
+    print("///Rock Paper Scissor Game///")
     print("")
     print("1. for Rock")
     print("2. for Paper")
@@ -20,6 +21,7 @@ while True:
     try:
         human_put = int(input()) - 1
     except ValueError:
+        print("")
         print("Not an integer")
         break
     comp_put = random.randint(0, 2)
@@ -32,6 +34,14 @@ while True:
     elif human_put == 3:
         print("Bye Bye")
         break
+    else:
+        print("")
+        print("Available Choices are: 1, 2, 3, 4")
+        print("")
+        print("Press any key to continue...")
+        input()
+        os.system("cls")
+        continue
     print("")
     print("Your Choice: ", choice)
     print("")
@@ -41,6 +51,10 @@ while True:
         print("It's a Tie")
     elif (human_put==0 and comp_put==1) or (human_put==1 and comp_put==2) or (human_put==2 and comp_put==0):
         print("You Lost!")
-    elif (comp_put==0 and human_put==1) or (comp_put==1 and human_put==1) or (comp_put==2 and comp_put==0):
+    elif (comp_put==0 and human_put==1) or (comp_put==1 and human_put==2) or (comp_put==2 and human_put==0):
         print("You Won!")
+    print("")
+    print("Press any key to continue...")
+    input()
+    os.system("cls")
 print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
