@@ -90,3 +90,7 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 * A user driven program to generate Random Password.
 * Generates using letters, number(s), and special character(s).
 * Module(s) used: `string`, `random`
+
+**[`rock_paper_scissor.py`](rock_paper_scissor.py)**
+* Rock Paper Scissor Game.
+* Module(s) used: `random`
