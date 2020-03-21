@@ -49,7 +49,7 @@ while True:
         print("")
         print("Press any key to continue...")
         input()
-        os.system("cls")
+        clear()
         continue
     print("")
     print("Your Choice: ", choice)
