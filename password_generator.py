@@ -20,7 +20,7 @@ newline()
 print("Enter Length of Password:")
 required_password = int(input())
 newline()
-for i in range(0,3):
+for i in range(0, 3):
     generated_password = ""
     required = required_password
     while required > 0:
