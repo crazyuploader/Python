@@ -7,6 +7,15 @@ __version__ = "1.0"
 import random
 import os
 
+def clear():
+    # For Windows
+    if os.name == "nt":
+        _ = os.system('cls')
+    
+    # For anything else (Linux, etc)
+    else:
+        _ = os.system('clear')
+
 
 while True:
     print("///Rock Paper Scissor Game///")
@@ -56,5 +65,5 @@ while True:
     print("")
     print("Press any key to continue...")
     input()
-    os.system("cls")
+    clear()
 print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
