@@ -7,11 +7,12 @@ __version__ = "1.0"
 import random
 import os
 
+
 def clear():
     # For Windows
     if os.name == "nt":
         _ = os.system('cls')
-    
+
     # For anything else (Linux, etc)
     else:
         _ = os.system('clear')
