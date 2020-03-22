@@ -11,9 +11,11 @@ print("")
 print(" ~ You have 5 attempts to guess it right")
 attempt = 5
 win = 0
-total = [["flower", "rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "cherry", "sunflower"],
-["animal", "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear"],[]]
-random_list = total[random.randint(0, 1)]
+total = [["Flower", "rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "cherry", "sunflower"],
+["Animal", "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear"],
+["Computer Part", "mouse", "keyoard", "monitor", "speaker", "processor", "motherboard", "pendrive"],
+["Body Part", "fingers", "toe", "leg", "hairs", "eyes", "nose", "ears", "lips", "hips", "mouth"]]
+random_list = total[random.randint(0, len(total) - 1)]
 random_word = random.choice(random_list)
 print("Hint: It's", random_list[0])
 print("Picking Random word... Done!")
@@ -24,7 +26,7 @@ while attempt >= 1:
     if attempt == 3:
         print("Hint 2: Second letter is --->", random_word[1])
     print("Enter {0} Name:".format(random_list[0]))
-    input_word = input().lower()
+    input_word = input().lower().replace(" ", "")
     if input_word == random_word:
         win += 1
         break
