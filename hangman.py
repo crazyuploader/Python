@@ -23,7 +23,7 @@ while attempt >= 1:
     print("")
     if attempt == 4:
         print("Hint 1: First letter is --->", random_word[0])
-    if attempt == 3:
+    elif attempt == 3:
         print("Hint 2: Second letter is --->", random_word[1])
     print("Enter {0} Name:".format(random_list[0]))
     input_word = input().lower().replace(" ", "")
