@@ -11,28 +11,21 @@ print("")
 print(" ~ You have 5 attempts to guess it right")
 attempt = 5
 win = 0
-flower = ["rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "cherry", "sunflower"]
-animal = ["dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear"]
-
-random_list = random.randint(1, 2)
-if random_list == 1:
-    chosen = "flower"
-    temp = flower
-elif random_list == 2:
-    chosen = "animal"
-    temp = animal
-print("Hint: It's", chosen)
-print("Picking Random {0}... Done!".format(chosen))
-random_list = random.choice(temp)
+total = [["flower", "rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "cherry", "sunflower"],
+["animal", "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear"],[]]
+random_list = total[random.randint(0, 1)]
+random_word = random.choice(random_list)
+print("Hint: It's", random_list[0])
+print("Picking Random word... Done!")
 while attempt >= 1:
     print("")
     if attempt == 4:
-        print("Hint 1: First letter is --->", random_list[0])
+        print("Hint 1: First letter is --->", random_word[0])
     if attempt == 3:
-        print("Hint 2: Second letter is --->", random_list[1])
-    print("Enter {0} Name:".format(chosen))
-    input_flower = input().lower()
-    if input_flower == random_list:
+        print("Hint 2: Second letter is --->", random_word[1])
+    print("Enter {0} Name:".format(random_list[0]))
+    input_word = input().lower()
+    if input_word == random_word:
         win += 1
         break
     else:
@@ -42,7 +35,7 @@ while attempt >= 1:
             print("Wrong Guess! Attempts Remaining:", attempt)
 if win > 0:
     print("")
-    print("Indeed the Correct Answer is:", input_flower)
+    print("Indeed the Correct Answer is:", input_word)
 else:
     print("All attempts are over, You are a looser :(")
 print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
