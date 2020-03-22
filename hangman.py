@@ -3,6 +3,7 @@
 __author__ = "Jugal Kishore & Akash Shiva"
 __version__ = "1.0"
 
+
 import random
 
 
@@ -11,10 +12,53 @@ print("")
 print(" ~ You have 5 attempts to guess it right")
 attempt = 5
 win = 0
-total = [["Flower", "rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "cherry", "sunflower"],
-["Animal", "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear"],
-["Computer Part", "mouse", "keyoard", "monitor", "speaker", "processor", "motherboard", "pendrive"],
-["Body Part", "fingers", "toe", "leg", "hairs", "eyes", "nose", "ears", "lips", "hips", "mouth"]]
+total = [
+    [
+        "Flower",
+        "rose",
+        "jasmine",
+        "lilly",
+        "tulip",
+        "snowdrops",
+        "lotus",
+        "cherry",
+        "sunflower",
+    ],
+    [
+        "Animal",
+        "dog",
+        "cat",
+        "elephant",
+        "horse",
+        "lion",
+        "tiger",
+        "cheetah",
+        "bear",
+    ],
+    [
+        "Computer Part",
+        "mouse",
+        "keyoard",
+        "monitor",
+        "speaker",
+        "processor",
+        "motherboard",
+        "pendrive",
+    ],
+    [
+        "Body Part",
+        "fingers",
+        "toe",
+        "leg",
+        "hairs",
+        "eyes",
+        "nose",
+        "ears",
+        "lips",
+        "hips",
+        "mouth",
+    ],
+]
 random_list = total[random.randint(0, len(total) - 1)]
 random_word = random.choice(random_list[1::])
 print("Hint: It's", random_list[0])
