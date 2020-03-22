@@ -7,7 +7,7 @@ print("///Program to Display factor(s) of an Entered Number///")
 print("\nEnter a Number: ")
 number = int(input())
 print("")
-for x in range(1, int(number+1)):
+for x in range(1, int(number + 1)):
     if int(number) % x == 0:
         print("{0} is divisble by {1}".format(number, x))
 print("\nCreated by Jugal Kishore -- 2020")
