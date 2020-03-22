@@ -16,7 +16,7 @@ total = [["Flower", "rose", "jasmine", "lilly", "tulip", "snowdrops", "lotus", "
 ["Computer Part", "mouse", "keyoard", "monitor", "speaker", "processor", "motherboard", "pendrive"],
 ["Body Part", "fingers", "toe", "leg", "hairs", "eyes", "nose", "ears", "lips", "hips", "mouth"]]
 random_list = total[random.randint(0, len(total) - 1)]
-random_word = random.choice(random_list)
+random_word = random.choice(random_list[1::])
 print("Hint: It's", random_list[0])
 print("Picking Random word... Done!")
 while attempt >= 1:
