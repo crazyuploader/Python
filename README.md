@@ -94,3 +94,7 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 **[`rock_paper_scissor.py`](rock_paper_scissor.py)**
 * Rock Paper Scissor Game.
 * Module(s) used: `random`
+
+**[`hangman.py`](hangman.py)**
+* Word Guessing Game.
+* Module(s) used: `random`
