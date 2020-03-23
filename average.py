@@ -12,5 +12,7 @@ for x in range(num):
     number.append(int(input()))
 total = sum(number)
 average = total / num
-print("\nAverage of Entered Number(s) is = ", round(average, 3))  # Limiting Decimal Precision to 3 Digits
+print(
+    "\nAverage of Entered Number(s) is = ", round(average, 3)
+)  # Limiting Decimal Precision to 3 Digits
 print("\nCreated by Jugal Kishore -- 2020")

@@ -9,5 +9,9 @@ a = input()
 print("\nEnter Second Number: ")
 b = input()
 multiplication = int(a) * int(b)
-print("\nFinal Product of Entered Number(s) {0} and {1} is = {2}".format(a, b, multiplication))
+print(
+    "\nFinal Product of Entered Number(s) {0} and {1} is = {2}".format(
+        a, b, multiplication
+    )
+)
 print("\nCreated by Jugal Kishore -- 2020")

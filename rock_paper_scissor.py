@@ -11,11 +11,11 @@ import os
 def clear():
     # For Windows
     if os.name == "nt":
-        _ = os.system('cls')
+        _ = os.system("cls")
 
     # For anything else (Linux, etc)
     else:
-        _ = os.system('clear')
+        _ = os.system("clear")
 
 
 while True:
@@ -59,9 +59,17 @@ while True:
     print("")
     if human_put == comp_put:
         print("It's a Tie")
-    elif (human_put == 0 and comp_put == 1) or (human_put == 1 and comp_put == 2) or (human_put == 2 and comp_put == 0):
+    elif (
+        (human_put == 0 and comp_put == 1)
+        or (human_put == 1 and comp_put == 2)
+        or (human_put == 2 and comp_put == 0)
+    ):
         print("You Lost!")
-    elif (comp_put == 0 and human_put == 1) or (comp_put == 1 and human_put == 2) or (comp_put == 2 and human_put == 0):
+    elif (
+        (comp_put == 0 and human_put == 1)
+        or (comp_put == 1 and human_put == 2)
+        or (comp_put == 2 and human_put == 0)
+    ):
         print("You Won!")
     print("")
     print("Press any key to continue...")

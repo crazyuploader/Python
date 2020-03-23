@@ -15,7 +15,7 @@ while run:
         print("Exiting!")
         break
     else:
-        equation = re.sub('[a-zA-Z,.:()" "]', '', equation)
+        equation = re.sub('[a-zA-Z,.:()" "]', "", equation)
         equation = eval(equation)
         print(equation)
 print("\nCreated by Jugal Kishore -- 2020")

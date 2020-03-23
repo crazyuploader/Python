@@ -56,14 +56,18 @@ while attempt > 0:
             print("The entered number should be in range [0,20]")
         else:
             newline()
-            print("Uh-huh, you guessed a little more than the generated number, try again")
+            print(
+                "Uh-huh, you guessed a little more than the generated number, try again"
+            )
     else:
         if number > 20 or number < 0:
             newline()
             print("The entered number should be in range [0,20]")
         else:
             newline()
-            print("Uh-huh, you guessed a little less than the generated number, try again")
+            print(
+                "Uh-huh, you guessed a little less than the generated number, try again"
+            )
     attempt -= 1
     if attempt == 0:
         newline()

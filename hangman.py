@@ -24,17 +24,7 @@ total = [
         "cherry",
         "sunflower",
     ],
-    [
-        "Animal",
-        "dog",
-        "cat",
-        "elephant",
-        "horse",
-        "lion",
-        "tiger",
-        "cheetah",
-        "bear",
-    ],
+    ["Animal", "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear",],
     [
         "Computer Part",
         "mouse",

@@ -16,21 +16,41 @@ while 1:
     print("Anything else to exit!")
     choice = input("\nChoice: ")
     if choice == "+":
-        print("\nAddition of {0} and {1} is = {2}".format(num_a, num_b, float(num_a) + float(num_b)))
+        print(
+            "\nAddition of {0} and {1} is = {2}".format(
+                num_a, num_b, float(num_a) + float(num_b)
+            )
+        )
     elif choice == "-":
-        print("\nSubtraction of {0} and {1} is = {2}".format(num_a, num_b, float(num_a) - float(num_b)))
+        print(
+            "\nSubtraction of {0} and {1} is = {2}".format(
+                num_a, num_b, float(num_a) - float(num_b)
+            )
+        )
     elif choice == "*":
-        print("\nMultiplication of {0} and {1} is = {2}".format(num_a, num_b, float(num_a) * float(num_b)))
+        print(
+            "\nMultiplication of {0} and {1} is = {2}".format(
+                num_a, num_b, float(num_a) * float(num_b)
+            )
+        )
     elif choice == "/":
         if num_b == "0":
             print("\nYou can't divide '{0}' by zero.".format(num_a))
         else:
-            print("\nDivison of {0} and {1} is = {2}".format(num_a, num_b, float(num_a) / float(num_b)))
+            print(
+                "\nDivison of {0} and {1} is = {2}".format(
+                    num_a, num_b, float(num_a) / float(num_b)
+                )
+            )
     elif choice == "%":
         if num_b == "0":
             print("\nYou can't divide '{0}' by zero.".format(num_a))
         else:
-            print("\nModulus of {0} and {1} is = {2}".format(num_a, num_b, round(float(num_a) % float(num_b), 3)))
+            print(
+                "\nModulus of {0} and {1} is = {2}".format(
+                    num_a, num_b, round(float(num_a) % float(num_b), 3)
+                )
+            )
     else:
         print("Uh-Oh, you decided to exit.")
         print("Exiting!")

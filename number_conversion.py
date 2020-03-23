@@ -13,5 +13,5 @@ while number > 0:
 array.reverse()  # Reversing the list, since the remainders are required to be written from bottom to top
 print("\nBinary Equivalent: ")
 for x in array:
-    print(x, end='')
+    print(x, end="")
 print("\n\nCreated by Jugal Kishore -- 2020")
