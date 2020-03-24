@@ -13,8 +13,7 @@ print(" ~ You have 5 attempts to guess it right")
 attempt = 5
 win = 0
 total = {
-	"Flower":
-    [
+    "Flower": [
         "rose",
         "jasmine",
         "lilly",
@@ -24,9 +23,17 @@ total = {
         "cherry",
         "sunflower",
     ],
-   "Animal": [ "dog", "cat", "elephant", "horse", "lion", "tiger", "cheetah", "bear",],
-    "Computer Part" : [
-        
+    "Animal": [
+        "dog",
+        "cat",
+        "elephant",
+        "horse",
+        "lion",
+        "tiger",
+        "cheetah",
+        "bear",
+    ],
+    "Computer Part": [
         "mouse",
         "keyoard",
         "monitor",
@@ -35,8 +42,7 @@ total = {
         "motherboard",
         "pendrive",
     ],
-    "Body Part" : [
-        
+    "Body Part": [
         "fingers",
         "toe",
         "leg",
