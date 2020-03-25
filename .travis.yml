@@ -1,13 +1,13 @@
 dist: bionic
 git:
   depth: false
+install:
+  - pip install --upgrade pip
+  - pip install flake8 pyflakes
 jobs:
   include:
     - stage: "Linting"
       language: python
-      before_script:
-        - pip install --upgrade pip
-        - pip install flake8 pyflakes
       name: "Python 2.7"
       python:
         - "2.7"
