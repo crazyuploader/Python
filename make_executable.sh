@@ -8,11 +8,8 @@ GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
 
 # Variables
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-echo "${BRANCH}"
-git remote -v
 git remote remove origin
 git remote add origin https://"${GH_REF}"
 git fetch --all
@@ -25,7 +22,7 @@ if [[ -n ${CHANGES} ]]; then
     CHANGED_FILES=$(git status --porcelain | cut -d " " -f 3)
     echo -e "${YELLOW}Changed Files${NC}"
     echo ""
-    for file in ${CHANGES}; do echo -e "${GREEN}${file}${NC}"; ((FILES = FILES + 1)); done
+    for file in ${CHANGED_FILES}; do echo -e "${GREEN}${file}${NC}"; ((FILES = FILES + 1)); done
     echo ""
     echo "${GREEN}${FILES} changed.${NC}"
     echo ""
