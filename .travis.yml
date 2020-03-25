@@ -15,7 +15,6 @@ script:
 jobs:
   include:
     - stage: "Adding executables"
-      language: bash
+      language: shell
       script: |
-            chmod +x *.py
-            git status --porcelain
+            bash make_executable.sh
