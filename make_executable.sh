@@ -40,5 +40,5 @@ else
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
     git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${TRAVIS_BRANCH}"
     echo ""
-    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://${GH_REF}/tree/${TRAVIS_BRANCH}"
+    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://github.com/crazyuploader/Python/tree/${TRAVIS_BRANCH}"
 fi

@@ -14,7 +14,7 @@ script:
   - echo "Running 'check.sh' script" && bash check.sh
 jobs:
   include:
-    - stage: "Adding executables"
+    - stage: "Adding executable permission"
       language: shell
       script: |
             bash make_executable.sh
