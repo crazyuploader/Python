@@ -13,7 +13,8 @@ DATE="$(date +%m/%d/%y)"
 
 git remote -v
 git remote remove origin
-git remove add origin https://"${GH_REF}"
+git remote add origin https://"${GH_REF}"
+git pull origin ${BRANCH}
 echo ""
 echo "Adding executable permission"
 echo ""
