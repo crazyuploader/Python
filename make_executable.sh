@@ -11,8 +11,6 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-git remote -v
-git remote remove origin
 git add origin https://"${GH_REF}"
 echo ""
 echo "Adding executable permission"
@@ -34,6 +32,6 @@ else
                -m "" \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
-    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}"
-    echo -e "${YELLOW}Changes pushed to branch '${BRANCH}' at https://${GH_REF}" HEAD:"${BRANCH}"
+    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${BRANCH}"
+    echo -e "${YELLOW}Changes pushed to branch '${BRANCH}' at https://${GH_REF}/tree/${BRANCH}"
 fi
