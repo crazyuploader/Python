@@ -12,9 +12,8 @@ print("")
 print(" ~ You have 5 attempts to guess it right")
 attempt = 5
 win = 0
-total = [
-    [
-        "Flower",
+total = {
+    "Flower": [
         "rose",
         "jasmine",
         "lilly",
@@ -24,8 +23,7 @@ total = [
         "cherry",
         "sunflower",
     ],
-    [
-        "Animal",
+    "Animal": [
         "dog",
         "cat",
         "elephant",
@@ -35,8 +33,7 @@ total = [
         "cheetah",
         "bear",
     ],
-    [
-        "Computer Part",
+    "Computer Part": [
         "mouse",
         "keyoard",
         "monitor",
@@ -45,8 +42,7 @@ total = [
         "motherboard",
         "pendrive",
     ],
-    [
-        "Body Part",
+    "Body Part": [
         "fingers",
         "toe",
         "leg",
@@ -58,10 +54,10 @@ total = [
         "hips",
         "mouth",
     ],
-]
-random_list = total[random.randint(0, len(total) - 1)]
-random_word = random.choice(random_list[1::])
-print("Hint: It's", random_list[0])
+}
+random_list = random.choice(list(total.keys()))
+random_word = random.choice(total[random_list])
+print("Hint: It's", random_list)
 print("Picking Random word... Done!")
 while attempt >= 1:
     print("")
@@ -69,7 +65,7 @@ while attempt >= 1:
         print("Hint 1: First letter is --->", random_word[0])
     elif attempt == 3:
         print("Hint 2: Second letter is --->", random_word[1])
-    print("Enter {0} Name:".format(random_list[0]))
+    print("Enter {0} Name:".format(random_list))
     input_word = input().lower().replace(" ", "")
     if input_word == random_word:
         win += 1
