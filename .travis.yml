@@ -1,11 +1,20 @@
+os: linux
 dist: bionic
 language: python
+git:
+  depth: false
 python:
-    - "2.7"
-    - "3.7"
-    - "3.8"
+  - "2.7"
+  - "3.7"
+  - "3.8"
 install:
-    - pip install --upgrade pip
-    - pip install flake8 pyflakes
+  - pip install --upgrade pip
+  - pip install flake8 pyflakes
 script:
-    - echo "Running 'check.sh' script" && bash check.sh
+  - echo "Running 'check.sh' script" && bash check.sh
+jobs:
+  include:
+    - stage: "Adding executable permission"
+      language: shell
+      script: |
+            bash make_executable.sh
