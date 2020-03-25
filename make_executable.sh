@@ -8,3 +8,5 @@ GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
 
 git remote -v
+git config user.email
+git config user.name
