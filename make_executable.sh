@@ -11,7 +11,9 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-git add origin https://"${GH_REF}"
+git remote -v
+git remote remove origin
+git remove add origin https://"${GH_REF}"
 echo ""
 echo "Adding executable permission"
 echo ""
