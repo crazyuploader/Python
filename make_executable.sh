@@ -11,6 +11,7 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
+echo "${BRANCH}"
 git remote -v
 git remote remove origin
 git remote add origin https://"${GH_REF}"
@@ -21,13 +22,13 @@ echo ""
 chmod +x ./*.py
 CHANGES=$(git status --porcelain)
 if [[ -n ${CHANGES} ]]; then
-    echo "Changed Files"
-    echo ""
-    for file in ${CHANGES}; do echo -e "'${YELLOW}${file}${NC}'"; done
-    echo ""
-fi
-if [[ -n ${CHANGES} ]]; then
     CHANGED_FILES=$(git status --porcelain | cut -d " " -f 3)
+    echo -e "${YELLOW}Changed Files${NC}"
+    echo ""
+    for file in ${CHANGES}; do echo -e "${GREEN}${file}${NC}"; ((FILES = FILES + 1)); done
+    echo ""
+    echo "${GREEN}${FILES} changed.${NC}"
+    echo ""
 fi
 if [[ -z ${CHANGES} ]]; then
     echo -e "${GREEN}Nothing to commit${NC}"
@@ -42,5 +43,6 @@ else
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
     git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${TRAVIS_BRANCH}"
+    echo ""
     echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://${GH_REF}/tree/${TRAVIS_BRANCH}"
 fi
