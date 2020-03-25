@@ -1,5 +1,4 @@
 os: linux
-arch: arm64
 dist: bionic
 language: python
 git:
@@ -17,4 +16,6 @@ jobs:
   include:
     - stage: "Adding executables"
       language: bash
-      script: echo "DOES NOTHING"
+      script: |
+            chmod +x *.py
+            git status --porcelain
