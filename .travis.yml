@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: "Linting"
       language: python
-      install:
+      before_script:
         - pip install --upgrade pip
         - pip install flake8 pyflakes
       name: "Python 2.7"
