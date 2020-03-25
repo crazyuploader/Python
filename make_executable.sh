@@ -11,9 +11,10 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-git clone https://"${GH_REF}" temp
-cd temp || exit
-git checkout ${BRANCH}
+git remote -v
+git remote remove origin
+git remote add origin https://"${GH_REF}"
+git fetch --all
 echo ""
 echo "Adding executable permission"
 echo ""
@@ -40,6 +41,6 @@ else
                -m ""                          \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
-    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${BRANCH}"
-    echo -e "${YELLOW}Changes pushed to branch '${BRANCH}' at https://${GH_REF}/tree/${BRANCH}"
+    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${TRAVIS_BRANCH}"
+    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://${GH_REF}/tree/${TRAVIS_BRANCH}"
 fi
