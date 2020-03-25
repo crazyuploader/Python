@@ -11,15 +11,19 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-git remote -v
-git remote remove origin
-git remote add origin https://"${GH_REF}"
-git pull origin ${BRANCH}
+git clone https://${GH_REF} -b ${BRANCH} temp
+cd temp || exit
 echo ""
 echo "Adding executable permission"
 echo ""
 chmod +x ./*.py
 CHANGES=$(git status --porcelain)
+if [[ -n ${CHANGES} ]]; then
+    echo "Changed Files"
+    echo ""
+    for file in ${CHANGES}; do echo -e "'${YELLOW}${file}${NC}'"; done
+    echo ""
+fi
 if [[ -n ${CHANGES} ]]; then
     CHANGED_FILES=$(git status --porcelain | cut -d " " -f 3)
 fi
@@ -29,10 +33,10 @@ else
     git config user.email "49350241+crazyuploader@users.noreply.github.com"
     git config user.name "crazyuploader"
     git add .
-    git commit -m "Travis CI" \
-               -m "" \
-               -m "Date: ${DATE}" \
-               -m "" \
+    git commit -m "Travis CI"              \
+               -m ""                        \
+               -m "Date: ${DATE}"            \
+               -m ""                          \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
     git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${BRANCH}"
