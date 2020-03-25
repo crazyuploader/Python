@@ -11,8 +11,9 @@ YELLOW="\033[1;33m"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DATE="$(date +%m/%d/%y)"
 
-git clone https://${GH_REF} -b ${BRANCH} temp
+git clone https://"${GH_REF}" temp
 cd temp || exit
+git checkout ${BRANCH}
 echo ""
 echo "Adding executable permission"
 echo ""
