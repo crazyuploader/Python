@@ -23,7 +23,7 @@ if [[ -n ${CHANGES} ]]; then
     echo -e "${YELLOW}Changed Files${NC}"
     echo ""
     for file in ${CHANGED_FILES}; do echo -e "${GREEN}${file}${NC}"; ((FILES = FILES + 1)); done
-    echo -e "${GREEN}${FILES} changed.${NC}"
+    echo -e "${GREEN}${FILES} file(s) changed.${NC}"
     echo ""
 fi
 if [[ -z ${CHANGES} ]]; then
