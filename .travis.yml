@@ -1,13 +1,25 @@
 dist: bionic
 git:
   depth: false
-language: python
-python:
-    - "2.7"
-    - "3.7"
-    - "3.8"
-install:
-    - pip install --upgrade pip
-    - pip install flake8 pyflakes
-script:
-    - echo "Running 'check.sh' script" && bash check.sh
+jobs:
+  include:
+    - stage: "Linting"
+      language: python
+      install:
+        - pip install --upgrade pip
+        - pip install flake8 pyflakes
+      name: "Python 2.7"
+      python:
+        - "2.7"
+      script:
+        - echo "Running 'check.sh' script" && bash check.sh
+    - name: "Python 3.7"
+      python:
+        - "3.7"
+      script:
+        - echo "Running 'check.sh' script" && bash check.sh
+    - name: "Python 3.8"
+      python:
+        - "3.8"
+      script:
+        - echo "Running 'check.sh' script" && bash check.sh
