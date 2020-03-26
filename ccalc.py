@@ -12,7 +12,7 @@ def find_sign():
     signs = ["+", "-", "*", "/", "%"]
     number_of_signs = len(signs)
     for value in signs:
-        if equation.find(value) == -1:
+        if equation[0].find(value) == -1:
             var += 1
     if var != number_of_signs:
         return True
@@ -41,5 +41,5 @@ while run:
             if find_sign() is True:
                 previous = eval(str(previous) + equation)
             else:
-                print("Try Again! You forgot to include a mathematical sign")
+                print("Check the mathematical signs, Try Again!")
 print("\nCreated by Jugal Kishore -- 2020")
