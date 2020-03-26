@@ -7,12 +7,16 @@ import re
 
 def find_sign():
     global equation
-    signs = ["+", "-", "*", "/"]
+    var = 0
+    signs = ["+", "-", "*", "/", "%"]
+    number_of_signs = len(signs)
     for value in signs:
         if equation.find(value) == -1:
-            return False
-        else:
-            return True
+            var += 1
+    if var != number_of_signs:
+        return True
+    else:
+        return False
 
 
 previous = 0
