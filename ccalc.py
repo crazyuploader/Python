@@ -5,6 +5,16 @@ __version__ = "1.1"
 
 import re
 
+def find_sign():
+    global equation
+    signs = ["+", "-", "*", "/"]
+    for value in signs:
+        if equation.find(value) == -1:
+            return False
+        else:
+            return True
+
+
 previous = 0
 run = True
 print("///Advanced Calculator///\n")
@@ -23,5 +33,8 @@ while run:
         if previous == 0:
             previous = eval(equation)
         else:
-            previous = eval(str(previous) + equation)
+            if find_sign() == True:
+                previous = eval(str(previous) + equation)
+            else:
+                print("Try Again! You forgot to include a mathematical sign")
 print("\nCreated by Jugal Kishore -- 2020")
