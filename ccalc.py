@@ -5,6 +5,7 @@ __version__ = "1.1"
 
 import re
 
+
 def find_sign():
     global equation
     var = 0
@@ -33,11 +34,11 @@ while run:
         print("Exiting!")
         break
     else:
-        equation = re.sub('[a-zA-Z,.:()" "]', '', equation)
+        equation = re.sub('[a-zA-Z,.:()" "]', "", equation)
         if previous == 0:
             previous = eval(equation)
         else:
-            if find_sign() == True:
+            if find_sign() is True:
                 previous = eval(str(previous) + equation)
             else:
                 print("Try Again! You forgot to include a mathematical sign")
