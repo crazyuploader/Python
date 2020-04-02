@@ -32,7 +32,7 @@ else
     git config user.email "49350241+crazyuploader@users.noreply.github.com"
     git config user.name "crazyuploader"
     git add .
-    git commit -m "Travis CI"                \
+    git commit -m "Travis CI [skip travis]"  \
                -m ""                          \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
