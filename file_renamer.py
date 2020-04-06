@@ -7,22 +7,17 @@ __version__ = "1.0"
 import os
 
 
-def print_list(name, renamed_list):
-    for f in renamed_list:
-        print(name + " ---> " + f)
-
-
 def rename_function():
-    renamed_files = list()
     current_folder = os.curdir
     filepaths = os.listdir(current_folder)
+    num = 0
     for name in filepaths:
         os.rename(name, name.replace(" ", "_"))
         renamed = name.replace(" ", "_")
         if name != renamed:
-            renamed_files.append(renamed)
-    print_list(name, renamed_files)
-    if len(renamed_files) == 0:
+            num += 1
+        print(name + " ---> " + renamed)
+    if num == 0:
         print("Nothing changed")
 
 
