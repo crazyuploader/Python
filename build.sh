@@ -49,7 +49,7 @@ echo "'y' for yes and anything else for no"
 read -r temp
 if [[ ${temp} = "y" ]]; then
     clear
-    echo -e "${YELLOW}///// Source Code for '${fname}'.py /////${NC}"
+    echo -e "${YELLOW}///// Source Code for '${fname}.py' /////${NC}"
     echo ""
     cat "${fname}.py"
     sleep 5
