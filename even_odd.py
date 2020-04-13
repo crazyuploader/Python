@@ -11,3 +11,5 @@ if int(a) % 2 == 0:
 else:
     print("Entered Number {0} is Odd".format(a))
 print("\nCreated by Jugal Kishore -- 2020")
+
+# Run it online at https://python.jugalkishore.repl.run/

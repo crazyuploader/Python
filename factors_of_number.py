@@ -11,3 +11,5 @@ for x in range(1, int(number + 1)):
     if int(number) % x == 0:
         print("{0} is divisble by {1}".format(number, x))
 print("\nCreated by Jugal Kishore -- 2020")
+
+# Run it online at https://python.jugalkishore.repl.run/

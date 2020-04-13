@@ -11,3 +11,5 @@ b = input()
 multiplication = int(a) * int(b)
 print("\nFinal Product of Entered Number(s) {0} and {1} is = {2}".format(a, b, multiplication))
 print("\nCreated by Jugal Kishore -- 2020")
+
+# Run it online at https://python.jugalkishore.repl.run/
