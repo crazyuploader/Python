@@ -10,7 +10,7 @@ RED="\033[0;31m"
 # Main Script
 clear
 echo -e "${GREEN}" "Available Files -${NC}"
-for f in *.py; do echo "$f"; done
+for f in *.py; do echo "${f}"; done
 echo ""
 echo -e "${RED}Type 'quit' to exit${NC}"
 echo ""
@@ -26,10 +26,10 @@ if [[ ${fname} == "quit" ]]; then
 fi
 if [[ -f ${fname}.py ]]; then
     clear
-    echo "Running '$fname.py' with Python3"
+    echo "Running '${fname}.py' with Python3"
     sleep 2
     clear
-    python3 "$fname.py"
+    python3 "${fname}.py"
 else
     clear
     echo -e "'${fname}' ${RED}does not exist!${NC}"
@@ -47,14 +47,16 @@ echo -e "${YELLOW}Show Source Code?${NC}"
 echo ""
 echo "'y' for yes and anything else for no"
 read -r temp
-if [[ $temp = "y" ]]; then
+if [[ ${temp} = "y" ]]; then
     clear
+    echo -e "${YELLOW}///// Source Code for '${fname}'.py /////${NC}"
+    echo ""
     cat "${fname}.py"
     sleep 5
     echo ""
     echo -e "Press 'y' to ${RED}Exit${NC}"
     read -r temp
-    if [[ $temp = "y" ]]; then
+    if [[ ${temp} = "y" ]]; then
         clear
         echo -e "${MAGENTA}K Thanks, Bye!${NC}"
         sleep 2
