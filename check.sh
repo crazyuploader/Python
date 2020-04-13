@@ -9,12 +9,12 @@ clear
 echo -e "${YELLOW}Python Linter${NC}"
 echo ""
 echo -e "${GREEN}Checking all the files with Pyflakes ${NC}"
-for f in *.py; do echo ""; echo "Checking '$f'"; pyflakes "$f"; done
+for f in *.py; do echo ""; echo "Checking '${f}'"; pyflakes "${f}"; done
 echo ""
 echo -e "${YELLOW}Pyflakes Done!${NC}"
 echo ""
 echo -e "${GREEN}Checking all the files with Flake8 ${NC}"
-for f in *.py; do echo ""; echo "Checking '$f'"; echo "$(flake8 "${f}" --count --ignore=C901 --exit-zero --max-complexity=10 --max-line-length=127 --statistics) errors"; done
+for f in *.py; do echo ""; echo "Checking '${f}'"; echo "$(flake8 "${f}" --count --ignore=C901 --exit-zero --max-complexity=10 --max-line-length=127 --statistics) errors"; done
 echo ""
 echo -e "${YELLOW}Flake8 Done!${NC}"
 FILES=0
