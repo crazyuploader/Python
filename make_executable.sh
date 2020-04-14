@@ -7,9 +7,6 @@ NC="\033[0m"
 GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
 
-# Variables
-DATE="$(date +%m/%d/%y)"
-
 git remote remove origin
 git remote add origin https://"${GH_REF}"
 git fetch --all
