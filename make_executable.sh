@@ -11,9 +11,15 @@ git remote remove origin
 git remote add origin https://"${GH_REF}"
 git fetch --all
 echo ""
-echo "Adding executable permission"
+echo -e "${GREEN}" "Available files -${NC}"
+LIST_FILES="$(find . -path ./.git -prune -o -name '*.py' -print | sed 's|^./||')"
+echo "${LIST_FILES}"
 echo ""
-chmod +x ./*.py
+echo "Adding Executable Permission"
+echo ""
+for file in ${LIST_FILES}; do
+    chmod +x ${file}
+done
 CHANGES=$(git status --porcelain)
 if [[ -n ${CHANGES} ]]; then
     CHANGED_FILES=$(git status --porcelain | cut -d " " -f 3)
