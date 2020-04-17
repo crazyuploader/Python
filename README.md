@@ -104,3 +104,6 @@ Just my Python Programs which can be run online [HERE](https://python.jugalkisho
 **[`file_renamer.py`](file_renamer.py)**
 * Python Program to remove the space from the names file(s) and folder(s) in current directory.
 * Module(s) used: `os`
+
+**[`list_op.py`](list_op.py)**
+* Python Program to get Sum of n umber(s) of element(s) and their Average.
