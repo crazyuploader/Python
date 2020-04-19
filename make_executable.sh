@@ -18,7 +18,7 @@ echo ""
 echo "Adding Executable Permission"
 echo ""
 for file in ${LIST_FILES}; do
-    chmod +x ${file}
+    chmod +x "${file}"
 done
 CHANGES=$(git status --porcelain)
 if [[ -n ${CHANGES} ]]; then
