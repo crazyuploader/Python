@@ -8,6 +8,9 @@
 
 Just my Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
 
+**[`corona_updates.py`](corona_updates.py)**
+* Corona Tracker in Python using API: https://github.com/NovelCOVID/API
+
 **[`hello.py`](hello.py)**
 * First Program to print 'Hello World!' & Print an Entered Name.
 
