@@ -53,6 +53,9 @@ while run:
             print("Deaths Today:   ", got["todayDeaths"])
             print("Total Recovered:", got["recovered"])
             print("Critical Cases: ", got["critical"])
+        else:
+            newline()
+            print("Country not found!")
     else:
         run = False
 print("API Used:", API_GITHUB)
