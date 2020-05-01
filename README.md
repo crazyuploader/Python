@@ -8,6 +8,10 @@
 
 Just my Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
 
+**[`corona_updates_india.py`](corona_updates_india.py)**
+* Corona Latest State wise Data, scrapped website: https://www.mohfw.gov.in/
+* Module(s) used: `requests`, `bs4`, `csvtomd`
+
 **[`corona_updates.py`](corona_updates.py)**
 * Corona Tracker in Python using API: https://github.com/NovelCOVID/API
 * Module(s) used: `requests`
