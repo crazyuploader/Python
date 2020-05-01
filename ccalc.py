@@ -14,10 +14,7 @@ def find_sign():
     for value in signs:
         if equation[0].find(value) == -1:
             var += 1
-    if var != number_of_signs:
-        return True
-    else:
-        return False
+    return var != number_of_signs
 
 
 previous = 0

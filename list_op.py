@@ -12,7 +12,7 @@ def getAverage(total, numbers):
 print("///List Average, Sum Program///")
 print("\nEnter Number of elements you want to have: ")
 elements = int(input())
-array, sum = [], 0
+array, Sum = [], 0
 average = 0.0
 for i in range(elements):
     print("\nEnter", i, "element:")
@@ -20,10 +20,10 @@ for i in range(elements):
 
 print("\nEntered Array: ", array)
 for i in range(elements):
-    sum = array[i] + sum
+    Sum = array[i] + Sum
 
-print("\nSum of all the elements =", sum)
-print("Average of all the elements =", getAverage(sum, elements))
+print("\nSum of all the elements =", Sum)
+print("Average of all the elements =", getAverage(Sum, elements))
 print("\nCreated by Jugal Kishore -- 2020")
 
 # Run it online at https://python.jugalkishore.repl.run/

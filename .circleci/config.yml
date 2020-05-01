@@ -8,6 +8,6 @@ jobs:
       - run:
           name: Getting Python & PIP Ready
           command: 'pip install --upgrade pip && pip install flake8 pyflakes'
-      - run: 
+      - run:
           name: Checking Python Programs using Pyflakes & Flake8
           command: bash check.sh

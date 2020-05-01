@@ -15,8 +15,7 @@ def get_data(URL):
     json_data = response.json()
     if response.status_code != 200:
         return "Not Found!"
-    else:
-        return json_data
+    return json_data
 
 
 API_GITHUB = "https://github.com/NovelCOVID/API"

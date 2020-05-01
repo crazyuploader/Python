@@ -8,8 +8,8 @@ print("\nEnter First Number: ")
 a = input()
 print("\nEnter Second Number: ")
 b = input()
-sum = int(a) + int(b)
-print("\nAddition of Entered Number(s) {0} and {1} is = {2}".format(a, b, sum))
+Sum = int(a) + int(b)
+print("\nAddition of Entered Number(s) {0} and {1} is = {2}".format(a, b, Sum))
 print("\nCreated by Jugal Kishore -- 2020")
 
 # Run it online at https://python.jugalkishore.repl.run/
