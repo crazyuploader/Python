@@ -59,5 +59,14 @@ while run:
         run = False
 print("API Used:", API_GITHUB)
 print("\nCreated by Jugal Kishore -- 2020")
-
 # Run it online at https://python.jugalkishore.repl.run/
+
+
+
+
+#for table printing table we can also do this
+# for i in range(0, 32):
+#     print("|",state[i]," "*(27-len(state[i]))," |",cases[i]," "*(21-len(cases[i]))," |",recovered[i]," "*(8-len(recovered[i]))," |",deaths[i]," "*(6-len(deaths[i]))," |")
+#     print("------------------------------------------------------------------------------------")
+
+# print("Total No. of cases in India: ",(soup.find("table").find_all("tr")[33].find_all("td")[1].find("strong").contents[0]),"\n\n")
