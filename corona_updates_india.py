@@ -30,3 +30,6 @@ for i in range(0, 32):
 file.write(output)
 file.close()
 os.system("csvtomd data.csv")
+print("")
+print("Website Scrapped:", URL)
+print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
