@@ -33,3 +33,5 @@ os.system("csvtomd data.csv")
 print("")
 print("Website Scrapped:", URL)
 print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
+
+# Run it online at https://python.jugalkishore.repl.run/
