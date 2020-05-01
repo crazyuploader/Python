@@ -1,0 +1,4 @@
+bs4==0.0.1
+csvtomd==0.3.0
+flake8==3.7.9
+pyflakes==2.2.0
