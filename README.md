@@ -6,8 +6,8 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/crazyuploader/Python) [![CodeFactor](https://www.codefactor.io/repository/github/crazyuploader/python/badge)](https://www.codefactor.io/repository/github/crazyuploader/python)
 
-Just my Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
-
+My Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
+---
 **[`corona_updates_india.py`](corona_updates_india.py)**
 * Corona Latest State wise Data, scrapped website: https://www.mohfw.gov.in/
 * Module(s) used: `requests`, `bs4`, `csvtomd`
