@@ -24,11 +24,15 @@ def rename_function():
 def rename_to_lower():
     current_dir = os.curdir
     file_name = os.listdir(current_dir)
+    num = 0
     for name in file_name:
         os.rename(name, name.lower())
         renamed = name.lower()
         if name != renamed:
+            num += 1
             print(name + " ---> " + renamed)
+        if num == 0:
+            print("No file changed")
 
 
 print("///File Renamer///\n")
