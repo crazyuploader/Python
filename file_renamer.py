@@ -16,17 +16,34 @@ def rename_function():
         renamed = name.replace(" ", "_")
         if name != renamed:
             num += 1
-        print(name + " ---> " + renamed)
+            print(name + " ---> " + renamed)
     if num == 0:
         print("Nothing changed")
 
 
+def rename_to_lower():
+    current_dir = os.curdir
+    file_name = os.listdir(current_dir)
+    for name in file_name:
+        os.rename(name, name.lower())
+        renamed = name.lower()
+        if name != renamed:
+            print(name + " ---> " + renamed)
+
+
 print("///File Renamer///\n")
-print("Do you want to rename all the file/folders with spaces in them?")
-print("'y' for yes, or anything to exit")
+print("1. Space Remover")
+print("2. File Name Upper to Lower")
+print("3. Space Remover + File Name Upper to Lower")
+print("Anything to exit")
 choice = input()
-if choice == "y":
+if choice == "1":
     rename_function()
+elif choice == "2":
+    rename_to_lower()
+elif choice == "3":
+    rename_function()
+    rename_to_lower()
 else:
     print("Exiting!")
 print("\nCreated by Jugal Kishore & Akash Shiva -- 2020")
