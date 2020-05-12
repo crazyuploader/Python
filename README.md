@@ -1,5 +1,6 @@
 # Python
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c873e8a1a16464faf7dbb5987ef8cef)](https://app.codacy.com/manual/jugalkishor839/Python?utm_source=github.com&utm_medium=referral&utm_content=crazyuploader/Python&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://github.com/crazyuploader/Python/workflows/Python/badge.svg?branch=master)](https://github.com/crazyuploader/Python/actions)
 [![Build Status](https://travis-ci.com/crazyuploader/Python.svg?branch=master)](https://travis-ci.com/crazyuploader/Python)
 [![CircleCI](https://circleci.com/gh/crazyuploader/Python/tree/master.svg?style=svg)](https://circleci.com/gh/crazyuploader/Python/tree/master)
