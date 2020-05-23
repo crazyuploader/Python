@@ -9,7 +9,7 @@ python:
   - "3.8"
 install:
   - pip install --upgrade pip
-  - pip install flake8 pyflakes
+  - pip install -r requirements.txt
 script:
   - echo "Running 'check.sh' script" && bash check.sh
 jobs:
