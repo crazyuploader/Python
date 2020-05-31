@@ -17,7 +17,7 @@ cases = []
 recovered = []
 deaths = []
 
-for i in range(1, 34):
+for i in range(1, 36):
     state.append((soup.find("table").find_all("tr")[i].find_all("td")[1].contents[0]))
     cases.append((soup.find("table").find_all("tr")[i].find_all("td")[2].contents[0]))
     recovered.append(
@@ -27,7 +27,7 @@ for i in range(1, 34):
 
 output = "State, Cases, Recovered, Deaths\n"
 file = open("data.csv", "w")
-for i in range(0, 33):
+for i in range(0, 35):
     output = (
         output
         + "\n"
