@@ -10,6 +10,9 @@
 
 ## My Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
 
+**[`Practice`](Practice)**
+- Programs written for Practice
+
 **[`corona_updates_india.py`](corona_updates_india.py)**
 
 - Corona Latest State wise Data, scrapped website: https://www.mohfw.gov.in/
