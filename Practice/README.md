@@ -19,7 +19,30 @@ for i in range(2000, 3201):
         number.append(str(i))
 print(",".join(number))
 ```
-- [ ] Question 2  | Level 1
+- [x] Question 2  | Level 1
+
+Question:
+
+Write a program which can compute the factorial of a given numbers.
+The results should be printed in a comma-separated sequence on a single line.
+Suppose the following input is supplied to the program:
+8
+Then, the output should be:
+40320
+
+Solution:
+
+```
+def fact(x):
+    if x == 0:
+        return 1
+    return x * fact(x - 1)
+
+print("Program to computer factorial of a number")
+print("\nEnter a number: ")
+number = int(input())
+print("\nFactorial of {0} is = {1}".format(number, fact(number)))
+```
 - [ ] Question 3  | Level 1
 - [ ] Question 4  | Level 1
 - [ ] Question 5  | Level 1
