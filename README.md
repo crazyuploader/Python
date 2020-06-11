@@ -3,11 +3,10 @@
 [![Build Status](https://github.com/crazyuploader/Python/workflows/Python/badge.svg?branch=master)](https://github.com/crazyuploader/Python/actions)
 [![Build Status](https://travis-ci.com/crazyuploader/Python.svg?branch=master)](https://travis-ci.com/crazyuploader/Python)
 [![CircleCI](https://circleci.com/gh/crazyuploader/Python/tree/master.svg?style=svg)](https://circleci.com/gh/crazyuploader/Python/tree/master)
-
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/crazyuploader/Python)
 [![CodeFactor](https://www.codefactor.io/repository/github/crazyuploader/python/badge)](https://www.codefactor.io/repository/github/crazyuploader/python)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c873e8a1a16464faf7dbb5987ef8cef)](https://app.codacy.com/manual/jugalkishor839/Python?utm_source=github.com&utm_medium=referral&utm_content=crazyuploader/Python&utm_campaign=Badge_Grade_Dashboard)
 
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/crazyuploader/Python)
 ## My Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).
 
 **[`Practice`](Practice)**
