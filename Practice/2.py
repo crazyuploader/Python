@@ -9,6 +9,7 @@ def fact(x):
         return 1
     return x * fact(x - 1)
 
+
 print("Program to computer factorial of a number")
 print("\nEnter a number: ")
 number = int(input())
