@@ -74,7 +74,7 @@
 
 - Program to Get Average of Entered Number(s).
 
-**[`table.py`](average.py)**
+**[`table.py`](table.py)**
 
 - Program to Show Table of Entered Number.
 
