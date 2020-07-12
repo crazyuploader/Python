@@ -18,8 +18,8 @@ def get_data(URL):
     return json_data
 
 
-API_GITHUB = "https://github.com/NovelCOVID/API"
-BASE_URL = "https://corona.lmao.ninja/v2/"
+API_GITHUB = "https://github.com/disease-sh/API"
+BASE_URL = "https://disease.sh/v2/"
 ALL_URL = BASE_URL + "all"
 fetched = get_data(ALL_URL)
 
@@ -46,12 +46,12 @@ while run:
             newline()
             print("Stats for", country)
             newline()
-            print("Total cases:    ", got["cases"])
-            print("Cases Today:    ", got["todayCases"])
-            print("Total Deaths:   ", got["deaths"])
-            print("Deaths Today:   ", got["todayDeaths"])
-            print("Total Recovered:", got["recovered"])
-            print("Critical Cases: ", got["critical"])
+            print("Total cases:\n", got["cases"])
+            print("\nCases Today:\n", got["todayCases"])
+            print("\nTotal Deaths:\n", got["deaths"])
+            print("\nDeaths Today:\n", got["todayDeaths"])
+            print("\nTotal Recovered:\n", got["recovered"])
+            print("\nCritical Cases:\n", got["critical"])
         else:
             newline()
             print("Country not found!")
