@@ -24,6 +24,7 @@ def my_exit():
     time.sleep(2)
     exit(0)
 
+
 files = []
 if os.name != "nt":
     subprocess.call(["bash", "./build.sh"])
@@ -85,4 +86,3 @@ else:
                 exit(0)
         else:
             my_exit()
-    
