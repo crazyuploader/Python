@@ -1,6 +1,7 @@
 os: linux
 dist: bionic
 language: python
+cache: pip
 git:
   depth: false
 python:
