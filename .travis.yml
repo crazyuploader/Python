@@ -18,4 +18,4 @@ jobs:
     - stage: "Adding executable permission"
       language: shell
       script: |
-            bash make_executable.sh
+        bash make_executable.sh
