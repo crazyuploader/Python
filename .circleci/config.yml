@@ -7,7 +7,15 @@ jobs:
       - checkout
       - run:
           name: Getting Python & PIP Ready
-          command: "pip install --upgrade pip && pip install -r requirements.txt"
+          command: |
+            pip install --upgrade pip
+            pip install -r requirements.txt
       - run:
-          name: Checking Python Programs using Pyflakes & Flake8
+          name: Python Version Info
+          command: python --version
+      - run:
+          name: Check Python Programs
           command: bash check.sh
+      - run:
+          name: Run Tests
+          command: py.test --verbose
