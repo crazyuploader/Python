@@ -16,4 +16,3 @@ def test_method_2():
     Call Add_2() for floating point
     """
     assert Add_2(5.2, 6.8) == 12
-
