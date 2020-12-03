@@ -5,14 +5,16 @@ cache: pip
 git:
   depth: false
 python:
-  - "2.7"
   - "3.7"
   - "3.8"
+  - "3.9"
 install:
   - pip install --upgrade pip
   - pip install -r requirements.txt
 script:
-  - echo "Running 'check.sh' script" && bash check.sh
+  - echo "Running 'check.sh' script"
+  - bash check.sh
+  - py.test --verbose
 jobs:
   include:
     - stage: "Adding executable permission"
