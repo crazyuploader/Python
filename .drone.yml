@@ -1,0 +1,10 @@
+kind: pipeline
+name: Python
+
+steps:
+- name: Python
+  image: python:latest
+  commands:
+  - pip install -r requirements.txt
+  - bash check.sh
+  - py.test --verbose
