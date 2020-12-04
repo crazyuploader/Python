@@ -5,17 +5,18 @@ __version__ = "1.0"
 
 
 import random
+import subprocess
 import os
 
 
 def clear():
     # For Windows
     if os.name == "nt":
-        _ = os.system("cls")
+        _ = subprocess.call("cls")
 
     # For anything else (Linux, etc)
     else:
-        _ = os.system("clear")
+        _ = subprocess.call("/usr/bin/clear")
 
 
 while True:
