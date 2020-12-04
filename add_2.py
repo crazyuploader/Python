@@ -12,7 +12,7 @@ print("\nEnter First Number: ")
 a = input()
 print("\nEnter Second Number: ")
 b = input()
-Sum = Add_2(a, b)
+Sum = Add_2(int(a), int(b))
 print("\nAddition of Entered Number(s) {0} and {1} is = {2}".format(a, b, Sum))
 print("\nCreated by Jugal Kishore -- 2020")
 
