@@ -2,9 +2,9 @@ kind: pipeline
 name: Python
 
 steps:
-- name: Python
-  image: python:latest
-  commands:
-  - pip install -r requirements.txt 1> /dev/null
-  - bash check.sh
-  - py.test --verbose
+  - name: Python
+    image: python:latest
+    commands:
+      - pip install -r requirements.txt 1> /dev/null
+      - bash check.sh
+      - py.test --verbose
