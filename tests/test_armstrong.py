@@ -1,4 +1,4 @@
-# Test check whether or not a number is armstrong
+# Test for whether or not a number is armstrong
 
 # By definition Armstrong number is a number which is equal
 # to the sum of cube of its digit
