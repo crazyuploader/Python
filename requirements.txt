@@ -3,4 +3,4 @@ csvtomd==0.3.0
 flake8==3.8.4
 pyflakes==2.2.0
 requests==2.25.0
-pytest==6.1.2
+pytest==6.2.0
