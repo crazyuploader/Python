@@ -1,0 +1,16 @@
+name: Make Executable
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run make_executable.sh
+        run: |
+          ./make_executable.sh
+        env:
+         GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
