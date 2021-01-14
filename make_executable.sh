@@ -37,11 +37,11 @@ else
     git config user.email "49350241+crazyuploader@users.noreply.github.com"
     git config user.name "crazyuploader"
     git add .
-    git commit -m "Travis CI [skip travis]"  \
+    git commit -m "Adding Executable Permission [skip ci]"  \
                -m ""                          \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
     git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${GITHUB_REF}"
     echo ""
-    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://github.com/crazyuploader/Python/tree/${GITHUB_REF}"
+    echo -e "${YELLOW}Changes pushed to branch '${GITHUB_REF}' at https://github.com/crazyuploader/Python/tree/${GITHUB_REF}"
 fi

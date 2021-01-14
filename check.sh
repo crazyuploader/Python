@@ -32,7 +32,8 @@ echo ""
 echo -e "${YELLOW}Checking all the files with Flake8 ${NC}"
 echo ""
 for file in ${LIST_FILES}; do
-    echo "Checking '${file}' | $(flake8 "${file}" --count --ignore=C901,W503 --exit-zero --max-complexity=10 --max-line-length=127 --statistics) error(s)"
+    echo "Checking '${file}'"
+    echo "$(flake8 "${file}" --count --ignore=C901,W503 --exit-zero --max-complexity=10 --max-line-length=127 --statistics) error(s)"
 done
 echo ""
 echo -e "Number of Python Files Checked: ${GREEN}${FILES}${NC}"

@@ -3,7 +3,7 @@ name: Make Executable
 on: [push, pull_request]
 
 jobs:
-  build:
+  make_executable:
     runs-on: "ubuntu-latest"
 
     steps:
