@@ -7,6 +7,8 @@ NC="\033[0m"
 GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
 
+GH_REF="github.com/crazyuploader/Python.git"
+
 git remote remove origin
 git remote add origin https://"${GH_REF}"
 git fetch --all
@@ -39,7 +41,7 @@ else
                -m ""                          \
                -m "Add Executable Permission:" \
                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
-    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${TRAVIS_BRANCH}"
+    git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${GITHUB_REF}"
     echo ""
-    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://github.com/crazyuploader/Python/tree/${TRAVIS_BRANCH}"
+    echo -e "${YELLOW}Changes pushed to branch '${TRAVIS_BRANCH}' at https://github.com/crazyuploader/Python/tree/${GITHUB_REF}"
 fi
