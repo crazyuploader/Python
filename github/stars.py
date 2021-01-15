@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Displays GitHub Starred Repo(s) for a given user"""
+"""Displays GitHub Starred Repo(s) for a given user."""
 
 import requests
-import os
+from os import name
+import subprocess
 
 __author__ = "Jugal Kishore"
 
 
 def clear():
-    if os.name == "posix":
-        os.system("clear")
+    if name == "posix":
+        subprocess.call("clear")
 
 
 USER = str(input("Enter GitHub Username: "))
