@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: pip
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: daily
@@ -9,3 +9,7 @@ updates:
     open-pull-requests-limit: 20
     reviewers:
       - crazyuploader
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
