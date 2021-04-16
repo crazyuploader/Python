@@ -5,27 +5,22 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: "ubuntu-latest"
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7, 3.8, 3.9]
+
+    container: crazyuploader/python_build_tools:latest
 
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2.2.2
-        with:
-          python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v2
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install --upgrade pip 1> /dev/null
+          pip install pipenv 1> /dev/null
+          pipenv install --system
 
       - name: Check Python Programs
         run: |
           bash check.sh
+
       - name: Run Tests
         run: |
           py.test --verbose

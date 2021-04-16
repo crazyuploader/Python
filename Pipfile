@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bs4 = "==0.0.1"
+csvtomd = "==0.3.0"
+flake8 = "==3.9.0"
+pyflakes = "==2.3.1"
+requests = "==2.25.1"
+pytest = "==6.2.3"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
