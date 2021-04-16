@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: "ubuntu-latest"
-    container: 
+    container: crazyuploader/python_build_tools:latest
     steps:
       - uses: actions/checkout@v1
 
