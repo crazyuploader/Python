@@ -9,7 +9,8 @@ jobs:
           name: Getting Python & PIP Ready
           command: |
             pip install --upgrade pip
-            pip install -r requirements.txt
+            pip install pipenv
+            pipenv install --system
       - run:
           name: Python Version Info
           command: python --version
