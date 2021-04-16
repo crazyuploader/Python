@@ -8,8 +8,8 @@ jobs:
       - run:
           name: Getting Python & PIP Ready
           command: |
-            pip install --upgrade pip
-            pip install pipenv
+            pip install --upgrade pip 1> /dev/null
+            pip install pipenv 1> /dev/null
             pipenv install --system
       - run:
           name: Python Version Info
