@@ -7,7 +7,28 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/crazyuploader/Python)
 
-<!--## My Python Programs which can be run online [HERE](https://python.jugalkishore.repl.run).-->
+## Usage
+
+To install dependencies -
+
+```shell
+pipenv install
+pipenv shell
+```
+
+On Linux System, to run a program -
+
+```bash
+./{PROGRAM_NAME}.py
+```
+
+Windows -
+
+```
+python {PROGRAM_NAME}.py
+```
+
+## Program List
 
 **[`Practice`](Practice)**
 
