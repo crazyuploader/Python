@@ -1,7 +1,7 @@
 # Python
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/crazyuploader/Python/Python/master?label=GitHub%20Actions%20Master%20Branch&logo=github-actions)](https://github.com/crazyuploader/Python/actions)
-[![CircleCI](https://circleci.com/gh/crazyuploader/Python/tree/master.svg?style=svg)](https://circleci.com/gh/crazyuploader/Python/tree/master)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/crazyuploader/Python/Python/main?label=GitHub%20Actions%20Main%20Branch&logo=github-actions)](https://github.com/crazyuploader/Python/actions)
+[![CircleCI](https://circleci.com/gh/crazyuploader/Python/tree/main.svg?style=svg)](https://circleci.com/gh/crazyuploader/Python/tree/main)
 [![CodeFactor](https://www.codefactor.io/repository/github/crazyuploader/python/badge)](https://www.codefactor.io/repository/github/crazyuploader/python)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c873e8a1a16464faf7dbb5987ef8cef)](https://app.codacy.com/manual/jugalkishor839/Python?utm_source=github.com&utm_medium=referral&utm_content=crazyuploader/Python&utm_campaign=Badge_Grade_Dashboard)
 
