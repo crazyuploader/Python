@@ -45,7 +45,34 @@ number = int(input())
 print("\nFactorial of {0} is = {1}".format(number, fact(number)))
 ```
 
-- [ ] Question 3 | Level 1
+- [x] Question 3  | Level 1
+
+With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
+Suppose the following input is supplied to the program:
+8
+Then, the output should be:
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+Solution:
+
+```
+def create_dict(integer):
+    dictionary = {}
+    temp = 1
+    while temp <= integer:
+        dictionary[temp] = temp * temp
+        temp += 1
+    return dictionary
+
+
+print("Enter an Integer")
+integer = int(input())
+if integer > 0:
+    print(create_dict(integer))
+else:
+    print("Integer should be greater than 1!")
+```
+
 - [ ] Question 4 | Level 1
 - [ ] Question 5 | Level 1
 - [ ] Question 6 | Level 2
