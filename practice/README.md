@@ -45,11 +45,11 @@ number = int(input())
 print("\nFactorial of {0} is = {1}".format(number, fact(number)))
 ```
 
-- [x] Question 3  | Level 1
+- [x] Question 3 | Level 1
 
 Question:
 
-With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
+With a given integral number n, write a program to generate a dictionary that contains (i, i\*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
 Suppose the following input is supplied to the program:
 8
 Then, the output should be:
@@ -96,7 +96,33 @@ print(li)
 print(tu)
 ```
 
-- [ ] Question 5 | Level 1
+- [x] Question 5 | Level 1
+
+Question:
+Define a class which has at least two methods:
+getString: to get a string from console input
+printString: to print the string in upper case.
+Also please include simple test function to test the class methods.
+
+Solution:
+
+```
+class IOString(object):
+    def __init__(self):
+        self.string = ""
+
+    def GetString(self):
+        self.string = str(input("Enter String: "))
+
+    def PrintString(self):
+        print(self.string.upper())
+
+
+st = IOString()
+st.GetString()
+st.PrintString()
+```
+
 - [ ] Question 6 | Level 2
 - [ ] Question 7 | Level 2
 - [ ] Question 8 | Level 2
