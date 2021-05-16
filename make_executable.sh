@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Add executable permission to '*.py' files in current directories
+# and subdirectories
 #
 # Colors
 NC="\033[0m"
@@ -34,13 +35,13 @@ fi
 if [[ -z ${CHANGES} ]]; then
     echo -e "${GREEN}Nothing to commit${NC}"
 else
-    git config user.email "49350241+crazyuploader@users.noreply.github.com"
-    git config user.name "crazyuploader"
+    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    git config user.name "github-actions"
     git add .
     git commit -m "Adding Executable Permission [skip ci]"  \
-               -m ""                          \
-               -m "Add Executable Permission:" \
-               -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
+                -m ""                          \
+                -m "Add Executable Permission:" \
+                -m "$(for changes in ${CHANGED_FILES}; do echo "${changes}"; done)"
     git push https://crazyuploader:"${GITHUB_TOKEN}"@"${GH_REF}" HEAD:"${GITHUB_REF}"
     echo ""
     echo -e "${YELLOW}Changes pushed to branch '${GITHUB_REF}' at https://github.com/crazyuploader/Python/tree/${GITHUB_REF}"
