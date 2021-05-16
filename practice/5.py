@@ -6,11 +6,12 @@ __version__ = "1.0"
 
 class IOString(object):
     def __init__(self):
+        """Initiatiating String"""
         self.string = ""
 
     def GetString(self):
         self.string = str(input("Enter String: "))
-    
+
     def PrintString(self):
         print(self.string.upper())
 
