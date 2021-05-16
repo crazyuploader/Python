@@ -28,7 +28,7 @@ Windows -
 python {PROGRAM_NAME}.py
 ```
 
-## Program List
+## Program(s) List
 
 **[`Practice`](Practice)**
 
