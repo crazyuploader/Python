@@ -1,6 +1,6 @@
 name: Python
 
-on: 
+on:
   push:
     branches:
       - main

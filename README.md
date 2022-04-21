@@ -30,19 +30,23 @@ python {PROGRAM_NAME}.py
 
 ## Program(s) List
 
-**[`Practice`](Practice)**
+**[`practice`](practice)**
 
-- Programs written for Practice
+- Program(s) written for Practice
 
 **[`corona_updates_india.py`](corona_updates_india.py)**
 
 - Corona Latest State wise Data, scrapped website: https://www.mohfw.gov.in/
-- Module(s) used: `requests`, `bs4`, `csvtomd`
+- Module(s) Used: `requests`, `bs4`, `csvtomd`
 
 **[`corona_updates.py`](corona_updates.py)**
 
-- Corona Tracker in Python using API: https://github.com/NovelCOVID/API
-- Module(s) used: `requests`
+- Corona Tracker in Python using API: https://github.com/disease-sh/API
+- Module(s) Used: `requests`
+
+**[`other`](other)**
+
+- Other Program(s)
 
 **[`hello.py`](hello.py)**
 
@@ -141,35 +145,35 @@ python {PROGRAM_NAME}.py
 
 - A little advanced Calculator Program.
 - Performs Mathematical Operations on Entered Equation.
-- Module(s) used: `re`
+- Module(s) Used: `re`
 
 **[`guess_it.py`](guess_it.py)**
 
 - A program which generates a Random Number between 0 and 20.
 - A user has to guess within 3 attempts.
-- Module(s) used: `random`
+- Module(s) Used: `random`
 
 **[`password_generator.py`](password_generator.py)**
 
 - A user driven program to generate Random Password.
 - Generates using letters, number(s), and special character(s).
-- Module(s) used: `string`, `random`
+- Module(s) Used: `string`, `random`
 
 **[`rock_paper_scissor.py`](rock_paper_scissor.py)**
 
 - Rock Paper Scissor Game.
-- Module(s) used: `random`
+- Module(s) Used: `random`
 
 **[`hangman.py`](hangman.py)**
 
 - Word Guessing Game.
-- Module(s) used: `random`
+- Module(s) Used: `random`
 
 **[`file_renamer.py`](file_renamer.py)**
 
 - Python Program to remove the space from the names file(s) and folder(s) in
   current directory.
-- Module(s) used: `os`
+- Module(s) Used: `os`
 
 **[`list_op.py`](list_op.py)**
 

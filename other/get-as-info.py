@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # filename: get-as-info.py
-
+"""Get AS Info for a given ASN"""
 
 __author__ = "Jugal Kishore <me@devjugal.com>"
 
-"""Get AS Info for a given ASN"""
+
 import requests
 import sys
 import time
 
 
-def get_param():
+def get_param() -> list[str]:
     if len(sys.argv) < 2:
         print("Usage: %s <ASN> ..." % sys.argv[0])
         print("Example: %s 9498" % sys.argv[0])
