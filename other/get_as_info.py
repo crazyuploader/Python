@@ -6,9 +6,13 @@
 __author__ = "Jugal Kishore <me@devjugal.com>"
 
 
-import requests
-import sys
-import time
+try:
+    import requests
+    import sys
+    import time
+except ImportError:
+    print("Please install the required modules")
+    sys.exit(1)
 
 
 def get_param() -> list[str]:
