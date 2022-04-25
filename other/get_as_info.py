@@ -26,7 +26,7 @@ def get_param() -> list[str]:
 def get_as_info(AS_NUMBER: str):
     if AS_NUMBER.__contains__("AS"):
         AS_NUMBER = AS_NUMBER.replace("AS", "")
-    url = "https://stat.ripe.net//data/as-overview/data.json?resource=AS" + AS_NUMBER
+    url = "https://stat.ripe.net/data/as-overview/data.json?resource=AS" + AS_NUMBER
     r = requests.get(url)
     if r.status_code != 200:
         print("Invalid AS Number: %s" % AS_NUMBER)
