@@ -6,33 +6,42 @@
 __author__ = "Jugal Kishore <me@devjugal.com>"
 
 
+import sys
+import time
 try:
     import requests
-    import sys
-    import time
 except ImportError:
     print("Please install the required modules")
     sys.exit(1)
 
 
+# Variable(s)
+RIPE_STAT_API_ENDPOINT = "https://stat.ripe.net/data/as-overview/data.json?resource=AS"
+
 def get_param() -> list[str]:
+    """
+    Get the ASN from the command line
+    """
     if len(sys.argv) < 2:
-        print("Usage: %s <ASN> ..." % sys.argv[0])
-        print("Example: %s 9498" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} <ASN> ...")
+        print(f"Example: {sys.argv[0]} 9498")
         sys.exit(1)
     return sys.argv[1:]
 
 
-def get_as_info(AS_NUMBER: str):
-    if AS_NUMBER.__contains__("AS"):
-        AS_NUMBER = AS_NUMBER.replace("AS", "")
-    url = "https://stat.ripe.net/data/as-overview/data.json?resource=AS" + AS_NUMBER
-    r = requests.get(url)
-    if r.status_code != 200:
-        print("Invalid AS Number: %s" % AS_NUMBER)
-        print("API URL: %s" % url)
+def get_as_info(as_number: str):
+    """
+    Get AS info from RIPE Stat API
+    """
+    if as_number.__contains__("AS"):
+        as_number = as_number.replace("AS", "")
+    url = RIPE_STAT_API_ENDPOINT + as_number
+    fetched_data = requests.get(url)
+    if fetched_data.status_code != 200:
+        print(f"Invalid AS Number: {as_number}")
+        print(f"API URL: {url}")
         sys.exit(1)
-    return r.json()
+    return fetched_data.json()
 
 
 if __name__ == "__main__":
@@ -41,7 +50,9 @@ if __name__ == "__main__":
     print("")
     for AS_NUMBER in get_param():
         as_info = get_as_info(AS_NUMBER)
-        print("  ASN Info: AS%s" % as_info['data']['resource'])
-        print("ASN Holder: %s" % as_info['data']['holder'])
+        asn = "AS" + as_info['data']['resource']
+        as_holder = as_info['data']['holder']
+        print(f"  ASN Info: AS{asn}")
+        print(f"ASN Holder: {as_holder}")
         print("")
-    print("--- Took %s seconds ---" % round(time.time() - start_time, 2))
+    print(f"--- Took {round(time.time() - start_time, 2)} seconds ---")
