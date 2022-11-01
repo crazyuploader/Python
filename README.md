@@ -44,7 +44,7 @@ python {PROGRAM_NAME}.py
 - Corona Tracker in Python using API: https://github.com/disease-sh/API
 - Module(s) Used: `requests`
 
-**[`other`](other)**
+**[`others`](others)**
 
 - Other Program(s)
 

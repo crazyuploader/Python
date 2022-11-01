@@ -7,14 +7,14 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 
 
 # Import Libraries
+import json
 from bs4 import BeautifulSoup
 import requests
-import json
 
 
 # Get HTML from speedtest.net website
 print("Getting HTML from speedtest.net website...")
-data = requests.get("https://www.speedtest.net/apps/cli")
+data = requests.get("https://www.speedtest.net/apps/cli", timeout=30)
 print(f"HTTP Status Code: {data.status_code}")
 if data.status_code != 200:
     print("Fatal: Error getting HTML file from: https://www.speedtest.net/apps/cli")
@@ -31,4 +31,4 @@ for link in links:
     tag = link.find("a")
     dicts[tag.string] = tag.get("href")
 
-print(json.dumps(dicts, indent = 4))
+print(json.dumps(dicts, indent=4))

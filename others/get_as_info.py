@@ -18,6 +18,7 @@ except ImportError:
 # Variable(s)
 RIPE_STAT_API_ENDPOINT = "https://stat.ripe.net/data/as-overview/data.json?resource=AS"
 
+
 def get_param() -> list[str]:
     """
     Get the ASN from the command line
@@ -33,10 +34,10 @@ def get_as_info(as_number: str):
     """
     Get AS info from RIPE Stat API
     """
-    if as_number.__contains__("AS"):
+    if "AS" in as_number:
         as_number = as_number.replace("AS", "")
     url = RIPE_STAT_API_ENDPOINT + as_number
-    fetched_data = requests.get(url)
+    fetched_data = requests.get(url, timeout=30)
     if fetched_data.status_code != 200:
         print(f"Invalid AS Number: {as_number}")
         print(f"API URL: {url}")
