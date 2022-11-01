@@ -13,16 +13,24 @@ from bs4 import BeautifulSoup
 import requests
 
 
+def print_it(string) -> None:
+    """Function to print to stdout"""
+
+    # If --silent argument is provided, skip printing most of the stuff
+    if "--silent" not in sys.argv[1:]:
+        print(string)
+
+
 # Get HTML from speedtest.net website
-print("Getting HTML from speedtest.net website...")
+print_it("Getting HTML from speedtest.net website...")
 data = requests.get("https://www.speedtest.net/apps/cli", timeout=30)
-print(f"HTTP Status Code: {data.status_code}")
+print_it(f"HTTP Status Code: {data.status_code}")
 if data.status_code != 200:
-    print("Fatal: Error getting HTML file from: https://www.speedtest.net/apps/cli")
-    print("Exiting!")
+    print_it("Fatal: Error getting HTML file from: https://www.speedtest.net/apps/cli")
+    print_it("Exiting!")
     sys.exit(1)
 else:
-    print("200 HTTP Status Code, continuing...")
+    print_it("200 HTTP Status Code, continuing...")
 
 # Souping
 soup = BeautifulSoup(data.text, "html.parser")
@@ -33,3 +41,4 @@ for link in links:
     dicts[tag.string] = tag.get("href")
 
 print(json.dumps(dicts, indent=4))
+print_it(sys.argv[1:])
