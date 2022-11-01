@@ -8,6 +8,7 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 
 # Import Libraries
 import json
+import sys
 from bs4 import BeautifulSoup
 import requests
 
@@ -19,7 +20,7 @@ print(f"HTTP Status Code: {data.status_code}")
 if data.status_code != 200:
     print("Fatal: Error getting HTML file from: https://www.speedtest.net/apps/cli")
     print("Exiting!")
-    exit(1)
+    sys.exit(1)
 else:
     print("200 HTTP Status Code, continuing...")
 
