@@ -31,14 +31,24 @@ if data.status_code != 200:
     sys.exit(1)
 else:
     print_it("200 HTTP Status Code, continuing...")
+    print_it("")
 
 # Souping
 soup = BeautifulSoup(data.text, "html.parser")
-links = soup.find(id="linux-flyout")
-dicts = {}
-for link in links:
-    tag = link.find("a")
-    dicts[tag.string] = tag.get("href")
 
-print(json.dumps(dicts, indent=4))
-print_it(sys.argv[1:])
+# Get links for Linux
+linux_links = soup.find(id="linux-flyout")
+linux_url = {}
+for link in linux_links:
+    tag = link.find("a")
+    linux_url[tag.string] = tag.get("href")
+
+# Get links for macOS & Windows
+other_links = soup.find_all("a", {"class": "btn btn-sm btn-outline btn-full-width"})
+other_url = {}
+for link in other_links:
+    OS = link.text.split(" ")[-1]
+    other_url[OS] = link.get("href")
+
+all_links = {"linux": linux_url, "others": other_url}
+print(json.dumps(all_links, indent=4))
