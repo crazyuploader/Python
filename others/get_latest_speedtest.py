@@ -9,6 +9,7 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 # Import Libraries
 import json
 import sys
+import time
 from bs4 import BeautifulSoup
 import requests
 
@@ -22,6 +23,7 @@ def print_it(string) -> None:
 
 
 # Get HTML from speedtest.net website
+start_time = time.time()
 print_it("Getting HTML from speedtest.net website...")
 data = requests.get("https://www.speedtest.net/apps/cli", timeout=30)
 print_it(f"HTTP Status Code: {data.status_code}")
@@ -44,11 +46,21 @@ for link in linux_links:
     linux_url[tag.string] = tag.get("href")
 
 # Get links for macOS & Windows
-other_links = soup.find_all("a", {"class": "btn btn-sm btn-outline btn-full-width"})
+other_links = soup.find_all(
+    "a", {"class": "btn btn-sm btn-outline btn-full-width"})
 other_url = {}
 for link in other_links:
     OS = link.text.split(" ")[-1]
     other_url[OS] = link.get("href")
 
-all_links = {"linux": linux_url, "others": other_url}
+# Get links for FreeBSD
+freebsd_links = soup.find(id="freebsd-flyout")
+freebsd_url = {}
+for link in freebsd_links:
+    tag = link.find("a")
+    freebsd_url[tag.string] = tag.get("href")
+
+all_links = {"linux": linux_url, "others": other_url, "freebsd": freebsd_url}
 print(json.dumps(all_links, indent=4))
+execution_time = round(time.time() - start_time, 2)
+print_it(f"Execution time: {execution_time} seconds")
