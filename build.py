@@ -28,7 +28,6 @@ def my_exit():
 files = []
 if os.name != "nt":
     subprocess.call(["bash", "./build.sh"])
-    exit
 else:
     clear_screen()
     print("Python version:", sys.version)
