@@ -14,8 +14,13 @@ from get_mirrors import get_sourceforge_mirrors
 
 
 def get_links(url):
+    if not (url.startswith("http://") or url.startswith("https://")):
+        url = "http://" + url
     mirror_list = get_sourceforge_mirrors()
-    final = requests.get(url, allow_redirects=True, stream=True, timeout=10)
+    try:
+        final = requests.get(url, allow_redirects=True, stream=True, timeout=10)
+    except Exception:
+        return
     if final.status_code != 200:
         return
     direct_links = []
