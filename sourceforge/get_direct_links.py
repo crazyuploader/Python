@@ -8,21 +8,24 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 
 import sys
 import re
+import time
 import requests
+from get_mirrors import get_sourceforge_mirrors
 
 
 def get_links(url):
-    mirror_list = requests.get("https://api.devjugal.com/sourceforge_mirrors", timeout=10).json()["mirrors"]
-    final_url = requests.get(url, allow_redirects=True, stream=True, timeout=10)
-    if final_url.status_code != 200:
+    mirror_list = get_sourceforge_mirrors()
+    final = requests.get(url, allow_redirects=True, stream=True, timeout=10)
+    if final.status_code != 200:
         return
     direct_links = []
     for mirror in mirror_list:
         regex = f"{mirror['short_name']}.dl"
-        mirror_url = re.sub(r"\w+\.dl", regex, final_url.url)
+        mirror_url = re.sub(r"\w+\.dl", regex, final.url)
         try:
             response = requests.get(mirror_url, allow_redirects=True, stream=True, timeout=30)
-            if response.status_code == 200:
+            size = response.headers.get("Content-Length")
+            if response.status_code == 200 and int(size) > 0:
                 direct_links.append(response.url)
         except Exception:
             continue
@@ -30,13 +33,16 @@ def get_links(url):
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     if len(sys.argv) == 1:
         print("No download URL is provided!!")
         exit(1)
     url = sys.argv[1]
     links = get_links(url)
-    if links:   
+    if links:
         for link in links:
             print(link)
     else:
         print("No links found, check download URL")
+    execution_time = round(time.time() - start_time, 2)
+    print(f"Execution time: {execution_time} seconds")
