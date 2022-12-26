@@ -11,3 +11,9 @@ Returns ASN Holder Details for any entered AS Number.
 Generates latest Ookla Speedtest CLI binaries for various architectures.
 
 - Module(s) Used: `beautifulsoup4`
+
+[`get_sourceforge_mirrors.py`](get_sourceforge_mirrors.py)
+
+Gets the SourceForge download mirrors
+
+- Module(s) Used: `beautifulsoup4`
