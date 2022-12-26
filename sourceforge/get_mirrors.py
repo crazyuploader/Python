@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# filename: get_sourceforge_mirrors.py
+# filename: get_mirrors.py
 """Get SourceForge mirror list"""
 
 __author__ = "Jugal Kishore <me@devjugal.com>"
