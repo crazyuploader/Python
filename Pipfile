@@ -13,7 +13,7 @@ beautifulsoup4 = "==4.12.2"
 
 [dev-packages]
 pytest = "==7.4.3"
-pytest-html = "==4.0.2"
+pytest-html = "==4.1.1"
 
 [requires]
 python_version = "3.10"
