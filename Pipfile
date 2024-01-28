@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-bs4 = "==0.0.1"
+bs4 = "==0.0.2"
 csvtomd = "==0.3.0"
 requests = "==2.31.0"
 pytest = "==7.4.4"
