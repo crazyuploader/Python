@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 bs4 = "==0.0.2"
 csvtomd = "==0.3.0"
-requests = "==2.31.0"
+requests = "==2.32.1"
 pytest = "==8.2.0"
 flake8 = "==7.0.0"
 beautifulsoup4 = "==4.12.3"
