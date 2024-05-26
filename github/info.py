@@ -15,7 +15,7 @@ if not USER:
     exit(1)
 
 print(f"Fetching Details for {USER}...")
-req = requests.get(GITHUB_API_URL + USER)
+req = requests.get(GITHUB_API_URL + USER, timeout=30)
 json = req.json()
 if req.status_code != 200:
     print("ERROR: Check username")

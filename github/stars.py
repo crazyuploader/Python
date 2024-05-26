@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """Displays GitHub Starred Repo(s) for a given user."""
 
-import requests
 from os import name
 import subprocess
+import requests
 
 __author__ = "Jugal Kishore"
 
 
 def clear():
+    """
+    Function to clear the console.
+    """
     if name == "posix":
         subprocess.call("clear")
 
@@ -19,7 +22,7 @@ if not USER:
     exit(1)
 clear()
 URL = f"https://api.github.com/users/{USER}/starred"
-got = requests.get(URL)
+got = requests.get(URL, timeout=30)
 JSON = got.json()
 print(f"Fetching Details for {USER}...")
 if got.status_code == 200:
