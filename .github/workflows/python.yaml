@@ -17,8 +17,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # pip install --upgrade pip 1> /dev/null
-          pip install pipenv --break-system-packages 1> /dev/null
+          apt-get update 1> /dev/null
+          apt-get install --yes python3 1> /dev/null
           pipenv install --system --dev
 
       - name: Check Python Programs
