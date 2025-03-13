@@ -1,5 +1,6 @@
 # Test for checking average of number(s)
 
+
 def Average(x):
     total = 0
     for number in x:

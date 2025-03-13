@@ -27,10 +27,14 @@ def get_sourceforge_mirrors() -> list[dict]:
     mirror_list = []
     for row in table.find_all("tr"):
         details = row.find_all("td")
-        mirror_list.append({"name": details[2].text,
-                            "short_name": details[1].text,
-                            "hostname": details[1].text + ".dl.sourceforge.net",
-                            "location": details[3].text})
+        mirror_list.append(
+            {
+                "name": details[2].text,
+                "short_name": details[1].text,
+                "hostname": details[1].text + ".dl.sourceforge.net",
+                "location": details[3].text,
+            }
+        )
     return (mirror_list, url)
 
 
