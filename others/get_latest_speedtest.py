@@ -46,8 +46,7 @@ for link in linux_links:
     linux_url[tag.string] = tag.get("href")
 
 # Get links for macOS & Windows
-other_links = soup.find_all(
-    "a", {"class": "btn btn-sm btn-outline btn-full-width"})
+other_links = soup.find_all("a", {"class": "btn btn-sm btn-outline btn-full-width"})
 other_url = {}
 for link in other_links:
     OS = link.text.split(" ")[-1]

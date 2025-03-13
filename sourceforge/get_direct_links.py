@@ -28,7 +28,9 @@ def get_links(url):
         regex = f"{mirror['short_name']}.dl"
         mirror_url = re.sub(r"\w+\.dl", regex, final.url)
         try:
-            response = requests.get(mirror_url, allow_redirects=True, stream=True, timeout=30)
+            response = requests.get(
+                mirror_url, allow_redirects=True, stream=True, timeout=30
+            )
             size = response.headers.get("Content-Length")
             if response.status_code == 200 and int(size) > 0:
                 direct_links.append(response.url)
