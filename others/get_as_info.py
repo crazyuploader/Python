@@ -8,6 +8,7 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 
 import sys
 import time
+
 try:
     import requests
 except ImportError:
@@ -51,8 +52,8 @@ if __name__ == "__main__":
     print("")
     for AS_NUMBER in get_param():
         as_info = get_as_info(AS_NUMBER)
-        asn = "AS" + as_info['data']['resource']
-        as_holder = as_info['data']['holder']
+        asn = "AS" + as_info["data"]["resource"]
+        as_holder = as_info["data"]["holder"]
         print(f"  ASN Info: AS{asn}")
         print(f"ASN Holder: {as_holder}")
         print("")
