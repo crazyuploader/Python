@@ -9,6 +9,7 @@ __author__ = "Jugal Kishore <me@devjugal.com>"
 from bs4 import BeautifulSoup
 import requests
 
+
 def get_as_prefixes(as_number: str) -> list[str]:
     """
     Get IP Prefixes for AS Number from https://bgp.he.net/
@@ -30,6 +31,7 @@ def get_as_prefixes(as_number: str) -> list[str]:
                 prefix = details.text.strip()
                 prefixes.append(prefix)
         return prefixes
+
 
 if __name__ == "__main__":
     as_number = input("Enter AS Number (e.g., AS15169): ")
