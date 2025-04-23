@@ -8,7 +8,7 @@ number, total = [], 0
 print("\nEnter Number of Numbers you want to get Average of: ")
 num = int(input())
 print("\nEnter ", num, " Number(s): ")
-for x in range(num):
+for _ in range(num):
     number.append(int(input()))
 total = sum(number)
 average = total / num
