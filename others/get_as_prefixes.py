@@ -17,43 +17,44 @@ def extract_prefixes_from_table(table) -> list[str]:
     :param table: BeautifulSoup table element
     :return: List of prefixes
     """
-    prefixes = []
+    PREFIXES = []
     for row in table.find_all("tr"):
         details = row.find("td")
         if details:
             prefix = details.text.strip()
-            prefixes.append(prefix)
-    return prefixes
+            PREFIXES.append(prefix)
+    return PREFIXES
 
 
 # Function to get IP Prefixes for AS Number
-def get_as_prefixes(as_number: str, ip_version: str | None = None) -> list[str]:
+def get_as_prefixes(number: str, version: str | None = None) -> list[str]:
     """
     Get IP Prefixes for AS Number from https://bgp.he.net/
-    :param as_number: AS Number
+    :param number: AS Number
+    :param version: IP Version (4/6/all)
     :return: List of IP Prefixes
     """
-    url = f"https://bgp.he.net/{as_number}"
+    url = f"https://bgp.he.net/{number}"
     response = requests.get(url, timeout=30)
     if response.status_code != 200:
         print("HTTP response:", response.status_code)
         return []
     soup = BeautifulSoup(response.text, "html.parser")
-    prefixes = []
-    if ip_version == "4":
+    PREFIXES = []
+    if version == "4":
         table = soup.find("table", {"id": "table_prefixes4"})
-        prefixes = extract_prefixes_from_table(table)
-        return prefixes
-    elif ip_version == "6":
+        PREFIXES = extract_prefixes_from_table(table)
+        return PREFIXES
+    elif version == "6":
         table = soup.find("table", {"id": "table_prefixes6"})
-        prefixes = extract_prefixes_from_table(table)
-        return prefixes
-    elif ip_version == "all":
+        PREFIXES = extract_prefixes_from_table(table)
+        return PREFIXES
+    elif version == "all":
         table_v4 = soup.find("table", {"id": "table_prefixes4"})
         table_v6 = soup.find("table", {"id": "table_prefixes6"})
-        prefixes = extract_prefixes_from_table(table_v4)
-        prefixes.extend(extract_prefixes_from_table(table_v6))
-        return prefixes
+        PREFIXES = extract_prefixes_from_table(table_v4)
+        PREFIXES.extend(extract_prefixes_from_table(table_v6))
+        return PREFIXES
     return []
 
 
