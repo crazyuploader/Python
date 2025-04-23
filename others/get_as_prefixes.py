@@ -18,11 +18,14 @@ def extract_prefixes_from_table(table) -> list[str]:
     :return: List of prefixes
     """
     prefixes = []
-    for row in table.find_all("tr"):
-        details = row.find("td")
-        if details:
-            prefix = details.text.strip()
-            prefixes.append(prefix)
+    try:
+        for row in table.find_all("tr"):
+            details = row.find("td")
+            if details:
+                prefix = details.text.strip()
+                prefixes.append(prefix)
+    except AttributeError:
+        return prefixes
     return prefixes
 
 
