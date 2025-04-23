@@ -65,9 +65,9 @@ else:
         if temp == "y":
             clear_screen()
             print("///Source Code for {0} ///\n".format(fname))
-            file = open(fname, "r")
-            print(file.read())
-            file.close()
+            with open(fname, "r") as file:
+                print(file.read())
+                file.close()
             time.sleep(5)
             print("\nEnter 'y' to exit")
             temp = input()

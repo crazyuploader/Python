@@ -26,15 +26,15 @@ for i in range(1, 36):
     deaths.append((soup.find("table").find_all("tr")[i].find_all("td")[4].contents[0]))
 
 output = "State, Cases, Recovered, Deaths\n"
-file = open("data.csv", "w")
-for i in range(0, 35):
-    output = (
-        output
-        + "\n"
-        + "{0}, {1}, {2}, {3}".format(state[i], cases[i], recovered[i], deaths[i])
-    )
-file.write(output)
-file.close()
+with open("data.csv", "w") as file:
+    for i in range(0, 35):
+        output = (
+            output
+            + "\n"
+            + "{0}, {1}, {2}, {3}".format(state[i], cases[i], recovered[i], deaths[i])
+        )
+    file.write(output)
+    file.close()
 os.system("csvtomd data.csv")
 os.system("rm data.csv")
 print("")
