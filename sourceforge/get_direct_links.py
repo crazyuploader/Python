@@ -20,9 +20,9 @@ def get_links(url):
     try:
         final = requests.get(url, allow_redirects=True, stream=True, timeout=10)
     except Exception:
-        return
+        return None
     if final.status_code != 200:
-        return
+        return None
     direct_links = []
     for mirror in mirror_list:
         regex = f"{mirror['short_name']}.dl"
