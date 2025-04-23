@@ -18,11 +18,14 @@ def extract_prefixes_from_table(table) -> list[str]:
     :return: List of prefixes
     """
     prefixes = []
-    for row in table.find_all("tr"):
-        details = row.find("td")
-        if details:
-            prefix = details.text.strip()
-            prefixes.append(prefix)
+    try:
+        for row in table.find_all("tr"):
+            details = row.find("td")
+            if details:
+                prefix = details.text.strip()
+                prefixes.append(prefix)
+    except AttributeError:
+        return prefixes
     return prefixes
 
 
@@ -45,11 +48,11 @@ def get_as_prefixes(number: str, version: str | None = None) -> list[str]:
         table = soup.find("table", {"id": "table_prefixes4"})
         prefixes = extract_prefixes_from_table(table)
         return prefixes
-    elif version == "6":
+    if version == "6":
         table = soup.find("table", {"id": "table_prefixes6"})
         prefixes = extract_prefixes_from_table(table)
         return prefixes
-    elif version == "all":
+    if version == "all":
         table_v4 = soup.find("table", {"id": "table_prefixes4"})
         table_v6 = soup.find("table", {"id": "table_prefixes6"})
         prefixes = extract_prefixes_from_table(table_v4)
