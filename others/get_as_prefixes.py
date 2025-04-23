@@ -45,11 +45,11 @@ def get_as_prefixes(number: str, version: str | None = None) -> list[str]:
         table = soup.find("table", {"id": "table_prefixes4"})
         prefixes = extract_prefixes_from_table(table)
         return prefixes
-    elif version == "6":
+    if version == "6":
         table = soup.find("table", {"id": "table_prefixes6"})
         prefixes = extract_prefixes_from_table(table)
         return prefixes
-    elif version == "all":
+    if version == "all":
         table_v4 = soup.find("table", {"id": "table_prefixes4"})
         table_v6 = soup.find("table", {"id": "table_prefixes6"})
         prefixes = extract_prefixes_from_table(table_v4)
