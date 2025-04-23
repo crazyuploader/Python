@@ -27,7 +27,7 @@ for i in range(0, 3):
         random_number = random.randint(0, length)
         generated_password = generated_password + letters[random_number]
         required -= 1
-    print("Generated Password:", generated_password)
+    print("Generated Password (copy it immediately, it will not be logged):", generated_password)
 newline()
 print("Created by Jugal Kishore -- 2020")
 
