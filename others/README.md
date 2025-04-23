@@ -17,3 +17,7 @@ Returns IP Prefixes for any entered AS Number.
 Generates latest Ookla Speedtest CLI binaries for various architectures.
 
 - Module(s) Used: `beautifulsoup4`, `requests`
+
+[`scan_network.py`](scan_network.py)
+
+Scans prefixes of an AS Number.
