@@ -17,13 +17,13 @@ def extract_prefixes_from_table(table) -> list[str]:
     :param table: BeautifulSoup table element
     :return: List of prefixes
     """
-    PREFIXES = []
+    prefixes = []
     for row in table.find_all("tr"):
         details = row.find("td")
         if details:
             prefix = details.text.strip()
-            PREFIXES.append(prefix)
-    return PREFIXES
+            prefixes.append(prefix)
+    return prefixes
 
 
 # Function to get IP Prefixes for AS Number
@@ -40,21 +40,21 @@ def get_as_prefixes(number: str, version: str | None = None) -> list[str]:
         print("HTTP response:", response.status_code)
         return []
     soup = BeautifulSoup(response.text, "html.parser")
-    PREFIXES = []
+    prefixes = []
     if version == "4":
         table = soup.find("table", {"id": "table_prefixes4"})
-        PREFIXES = extract_prefixes_from_table(table)
-        return PREFIXES
+        prefixes = extract_prefixes_from_table(table)
+        return prefixes
     elif version == "6":
         table = soup.find("table", {"id": "table_prefixes6"})
-        PREFIXES = extract_prefixes_from_table(table)
-        return PREFIXES
+        prefixes = extract_prefixes_from_table(table)
+        return prefixes
     elif version == "all":
         table_v4 = soup.find("table", {"id": "table_prefixes4"})
         table_v6 = soup.find("table", {"id": "table_prefixes6"})
-        PREFIXES = extract_prefixes_from_table(table_v4)
-        PREFIXES.extend(extract_prefixes_from_table(table_v6))
-        return PREFIXES
+        prefixes = extract_prefixes_from_table(table_v4)
+        prefixes.extend(extract_prefixes_from_table(table_v6))
+        return prefixes
     return []
 
 
@@ -67,10 +67,10 @@ if __name__ == "__main__":
     if ip_version not in ["4", "6", "all"]:
         print("Invalid IP Version. Please enter 4, 6, or 'all'.")
         exit(1)
-    prefixes = get_as_prefixes(as_number, ip_version)
-    if prefixes:
+    data = get_as_prefixes(as_number, ip_version)
+    if data:
         print(f"IP Prefixes for {as_number}:")
-        for prefix in prefixes:
-            print(prefix)
+        for entry in data:
+            print(entry)
     else:
         print("No prefixes found.")
