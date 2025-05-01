@@ -8,7 +8,7 @@ RED="\033[0;31m"
 
 echo ""
 echo -e "${GREEN}" "Available files -${NC}"
-LIST_FILES="$(find . -path ./.git -prune -o -name '*.py' -print | sed 's|^./||' | sort)"
+LIST_FILES="$(find . \( -path './.git' -o -path './.venv' \) -prune -o -name '*.py' -print | sed 's|^\./||' | sort)"
 FILES=0
 for file in ${LIST_FILES}; do
     echo "$file"
