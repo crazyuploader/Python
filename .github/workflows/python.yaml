@@ -10,7 +10,7 @@ jobs:
     build:
         runs-on: "ubuntu-latest"
 
-        container: python:3.11-bullseye
+        container: python:3.13-bullseye
 
         steps:
             - uses: actions/checkout@v4
