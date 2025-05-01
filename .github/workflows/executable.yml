@@ -3,14 +3,14 @@ name: Make Executable
 on: [push, pull_request]
 
 jobs:
-  make_executable:
-    runs-on: "ubuntu-latest"
+    make_executable:
+        runs-on: "ubuntu-latest"
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
 
-      - name: Run make_executable.sh
-        run: |
-          ./make_executable.sh
-        env:
-          GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+            - name: Run make_executable.sh
+              run: |
+                  ./make_executable.sh
+              env:
+                  GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}

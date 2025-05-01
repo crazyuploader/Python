@@ -1,37 +1,38 @@
 name: Python
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+    push:
+        branches:
+            - main
+    pull_request:
 
 jobs:
-  build:
-    runs-on: "ubuntu-latest"
+    build:
+        runs-on: "ubuntu-latest"
 
-    container: python:3.11-bullseye
+        container: python:3.11-bullseye
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
+            - name: Install uv
+              uses: astral-sh/setup-uv@v5
 
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip 1> /dev/null
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-          uv sync --frozen --no-install-project --no-dev --python-preference=only-system
+            - name: Install dependencies
+              run: |
+                  pip install --upgrade pip 1> /dev/null
+                  $HOME/.local/bin/uv sync --frozen --no-install-project --no-dev --python-preference=only-system
 
-      - name: Check Python Programs
-        run: |
-          uv run bash check.sh
+            - name: Check Python Programs
+              run: |
+                  uv run bash check.sh
 
-      - name: Run Test(s) with pytest
-        run: |
-          uv run pytest --verbose --html report/index.html
+            - name: Run Test(s) with pytest
+              run: |
+                  uv run pytest --verbose --html report/index.html
 
-      - name: Upload Pytest Report
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: Report File(s)
-          path: report/
-          retention-days: 30
+            - name: Upload Pytest Report
+              uses: actions/upload-artifact@v4.6.2
+              with:
+                  name: Report File(s)
+                  path: report/
+                  retention-days: 30

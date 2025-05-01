@@ -1,22 +1,36 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: "python:latest"
-    steps:
-      - checkout
-      - run:
-          name: Getting Environment Ready
-          command: |
-            pip install --upgrade pip 1> /dev/null
-            curl -LsSf https://astral.sh/uv/install.sh | sh
-            uv sync --frozen --no-install-project --no-dev --python-preference=only-system
-      - run:
-          name: Python Version Info
-          command: uv run python --version
-      - run:
-          name: Check Python Programs
-          command: uv run bash check.sh
-      - run:
-          name: Run Tests
-          command: uv run py.test --verbose
+    build:
+        docker:
+            - image: "python:latest"
+        steps:
+            - checkout
+            - run:
+                  name: Install uv and setup PATH
+                  shell: /bin/bash -eo pipefail
+                  command: |
+                      pip install --upgrade pip > /dev/null
+                      curl -LsSf https://astral.sh/uv/install.sh | sh
+                      # Add uv to PATH for this session and future steps
+                      echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
+                      source $BASH_ENV
+                      uv --version   # Verify uv is installed
+                      uv sync --frozen --no-install-project --no-dev --python-preference=only-system
+            - run:
+                  name: Python Version Info
+                  shell: /bin/bash -eo pipefail
+                  command: |
+                      source $BASH_ENV
+                      uv run python --version
+            - run:
+                  name: Check Python Programs
+                  shell: /bin/bash -eo pipefail
+                  command: |
+                      source $BASH_ENV
+                      uv run bash check.sh
+            - run:
+                  name: Run Tests
+                  shell: /bin/bash -eo pipefail
+                  command: |
+                      source $BASH_ENV
+                      uv run py.test --verbose
