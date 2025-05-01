@@ -9,14 +9,14 @@ jobs:
           name: Getting Environment Ready
           command: |
             pip install --upgrade pip 1> /dev/null
-            pip install pipenv 1> /dev/null
-            pipenv install --system
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            uv sync --frozen --no-install-project --no-dev --python-preference=only-system
       - run:
           name: Python Version Info
-          command: python --version
+          command: uv run python --version
       - run:
           name: Check Python Programs
-          command: bash check.sh
+          command: uv run bash check.sh
       - run:
           name: Run Tests
-          command: py.test --verbose
+          command: uv run py.test --verbose

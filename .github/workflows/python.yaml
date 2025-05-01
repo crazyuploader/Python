@@ -18,16 +18,16 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip 1> /dev/null
-          pip install pipenv 1> /dev/null
-          pipenv install --system --dev
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv sync --frozen --no-install-project --no-dev --python-preference=only-system
 
       - name: Check Python Programs
         run: |
-          bash check.sh
+          uv run bash check.sh
 
       - name: Run Test(s) with pytest
         run: |
-          pytest --verbose --html report/index.html
+          uv run pytest --verbose --html report/index.html
 
       - name: Upload Pytest Report
         uses: actions/upload-artifact@v4.6.2
