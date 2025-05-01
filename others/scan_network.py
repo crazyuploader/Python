@@ -52,7 +52,11 @@ def ping_ip(ip):
 
 
 if __name__ == "__main__":
-    url = "https://api.devjugal.com/as/prefixes?as_number=AS9830"
+    api_endpoint = "https://api.devjugal.com/as/prefixes?as_number="
+    as_number = input("Enter AS Number (e.g., AS15169): ")
+    if not as_number.startswith("AS"):
+        as_number = "AS" + as_number
+    url = api_endpoint + as_number
     prefixes = fetch_prefixes_from_url(url)
     print(f"Fetched {len(prefixes)} prefixes from API.")
 
