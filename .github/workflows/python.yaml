@@ -19,8 +19,7 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  pip install --upgrade pip 1> /dev/null
-                  $HOME/.local/bin/uv sync --frozen --no-install-project --no-dev --python-preference=only-system
+                  uv sync --frozen --no-install-project --no-dev --python-preference=only-system
 
             - name: Check Python Programs
               run: |
