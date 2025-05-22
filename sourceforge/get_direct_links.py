@@ -13,15 +13,15 @@ import requests
 from get_mirrors import get_sourceforge_mirrors
 
 
-def get_links(link):
+def get_links(file_link):
     """
     Get list of direct links from SourceForge for a specific URL
     """
-    if not (link.startswith("http://") or link.startswith("https://")):
-        link = "http://" + link
+    if not (file_link.startswith("http://") or file_link.startswith("https://")):
+        file_link = "http://" + file_link
     mirror_list, _ = get_sourceforge_mirrors()
     try:
-        final = requests.get(link, allow_redirects=True, stream=True, timeout=10)
+        final = requests.get(file_link, allow_redirects=True, stream=True, timeout=10)
     except Exception as error:
         print(error)
         return None
