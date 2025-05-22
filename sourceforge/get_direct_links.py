@@ -14,29 +14,32 @@ from get_mirrors import get_sourceforge_mirrors
 
 
 def get_links(url):
+    """
+    Get list of direct links from SourceForge for a specific URL
+    """
     if not (url.startswith("http://") or url.startswith("https://")):
         url = "http://" + url
-    mirror_list = get_sourceforge_mirrors()
+    mirror_list, _ = get_sourceforge_mirrors()
     try:
         final = requests.get(url, allow_redirects=True, stream=True, timeout=10)
-    except Exception:
+    except Exception as error:
+        print(error)
         return None
     if final.status_code != 200:
         return None
     direct_links = []
     for mirror in mirror_list:
-        regex = f"{mirror['short_name']}.dl"
-        mirror_url = re.sub(r"\w+\.dl", regex, final.url)
+        hostname_prefix = mirror["name"].lower()
+        regex_replace_pattern = rf"{hostname_prefix}.dl"
+        mirror_url = re.sub(r"\w+\.dl", regex_replace_pattern, final.url)
         try:
-            response = requests.get(
-                mirror_url, allow_redirects=True, stream=True, timeout=30
-            )
+            response = requests.head(mirror_url, allow_redirects=True, timeout=2)
             size = response.headers.get("Content-Length")
             if response.status_code == 200 and int(size) > 0:
                 direct_links.append(response.url)
         except Exception:
             continue
-    return direct_links
+    return [*set(direct_links)]
 
 
 if __name__ == "__main__":
