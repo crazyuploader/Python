@@ -8,14 +8,14 @@ dependencies = [
     "bs4==0.0.2",
     "csvtomd==0.3.0",
     "requests==2.34.2",
-    "pytest==9.0.3",
+    "pytest==9.1.0",
     "flake8==7.3.0",
     "beautifulsoup4==4.15.0"
 ]
 
 [dependency-groups]
 dev = [
-    "pytest==9.0.3",
+    "pytest==9.1.0",
     "pytest-html==4.2.0",
 ]
 
